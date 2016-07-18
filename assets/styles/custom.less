@@ -5,7 +5,33 @@ will ultimately load to make the ng-cloak display none until $compile thing runs
   display: none !important;
 }
 
+@label-icon-size:48px;
+@label-error-color:red;
+@label-name-color:dodgerblue;;
+@label-email-color:green;
+@label-phone-color:orange;
 
-
-body{
+md-input-container{
+    md-icon{
+        min-height: @label-icon-size;
+    }
 }
+md-input-container:not(.md-input-invalid) {
+ > md-icon.name{
+     color:@label-name-color;
+ }
+ > md-icon.email{
+    color:@label-email-color;
+ }
+ > md-icon.phone{
+    color:@label-phone-color;
+ }
+}
+md-input-container.md-input-invalid > md-icon{
+    color:@label-error-color;
+}
+/*
+.material-icons.orange600 { color: #FB8C00; }
+
+md-input-container:not(.md-input-invalid) > md-icon.email {
+    color: green; }*/

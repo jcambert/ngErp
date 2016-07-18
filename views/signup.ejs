@@ -6,7 +6,7 @@
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--STYLES-->
     <link rel="stylesheet" href="/styles/angular-material.css">
     <link rel="stylesheet" href="/styles/importer.css">
@@ -31,7 +31,38 @@
 
         </div>
     </md-toolbar>
-
+    <div flex layout="row" layout-align="center center">
+        <div flex-sm="100" flex-gt-sm="90" flex-gt-md="70" flex-gt-lg="50" class="md-whiteframe-z2">
+            <md-content class="md-no-momentum">
+                <md-input-container class="md-icon-float md-block">
+                <!-- Use floating label instead of placeholder -->
+                    <label>Your full name</label>
+                    <md-icon class="name"> face </md-icon>
+                    <input ng-model="user.name" type="text" >
+                </md-input-container>
+                <md-input-container md-no-float class="md-block">
+                     <label>Phone Number</label>
+                    <md-icon class="phone">phone</md-icon>
+                    <input ng-model="user.phone" type="text" >
+                </md-input-container>
+                <md-input-container class="md-block">
+                     <label>Email</label>
+                    <md-icon class="email">email</md-icon>
+                    <input ng-model="user.email" type="email"  ng-required="true">
+                </md-input-container>
+                <md-input-container md-no-float class="md-block">
+                <input ng-model="user.address" type="text" placeholder="Address" >
+                <md-icon md-svg-src="img/icons/ic_place_24px.svg" style="display:inline-block;"></md-icon>
+                </md-input-container>
+                <md-input-container class="md-icon-float md-icon-right md-block">
+                    <label>Donation Amount</label>
+                    <md-icon md-svg-src="img/icons/ic_card_giftcard_24px.svg"></md-icon>
+                    <input ng-model="user.donation" type="number" step="0.01">
+                    <md-icon md-svg-src="img/icons/ic_euro_24px.svg"></md-icon>
+                </md-input-container>
+            </md-content>
+        </div>
+    </div>
     <md-content flex layout-padding>
         <form ng-submit="submitSignupForm()" id="sign-up-form" class="form-signin" name="signup">
         <h2 class="form-signin-heading">Create an account</h2>
