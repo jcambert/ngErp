@@ -32,6 +32,7 @@ var jsFilesToInject = [
   'js/dependencies/**/*.js',
   
   //Declare modules before all other angular public js 
+  'js/public/common.js',
   'js/public/signup/SignupModule.js',
   
   // All of the rest of your client-side js files

@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--STYLES-->
     <link rel="stylesheet" href="/styles/angular-material.css">
+    <link rel="stylesheet" href="/styles/angular-toastr.css">
     <link rel="stylesheet" href="/styles/importer.css">
     <!--STYLES END-->
 
@@ -33,136 +34,80 @@
     </md-toolbar>
     <div flex layout="row" layout-align="center center">
         <div flex-sm="100" flex-gt-sm="90" flex-gt-md="70" flex-gt-lg="50" class="md-whiteframe-z2">
-            <md-content class="md-no-momentum">
-                <md-input-container class="md-icon-float md-block">
-                <!-- Use floating label instead of placeholder -->
-                    <label>Your full name</label>
-                    <md-icon class="name"> face </md-icon>
-                    <input ng-model="user.name" type="text" >
-                </md-input-container>
-                <md-input-container md-no-float class="md-block">
-                     <label>Phone Number</label>
-                    <md-icon class="phone">phone</md-icon>
-                    <input ng-model="user.phone" type="text" >
-                </md-input-container>
-                <md-input-container class="md-block">
-                     <label>Email</label>
-                    <md-icon class="email">email</md-icon>
-                    <input ng-model="user.email" type="email"  ng-required="true">
-                </md-input-container>
-                <md-input-container md-no-float class="md-block">
-                <input ng-model="user.address" type="text" placeholder="Address" >
-                <md-icon md-svg-src="img/icons/ic_place_24px.svg" style="display:inline-block;"></md-icon>
-                </md-input-container>
-                <md-input-container class="md-icon-float md-icon-right md-block">
-                    <label>Donation Amount</label>
-                    <md-icon md-svg-src="img/icons/ic_card_giftcard_24px.svg"></md-icon>
-                    <input ng-model="user.donation" type="number" step="0.01">
-                    <md-icon md-svg-src="img/icons/ic_euro_24px.svg"></md-icon>
-                </md-input-container>
-            </md-content>
+            <form ng-submit="submitSignupForm()" id="sign-up-form" class="form-signin" name="signup">
+                <h2 class="form-signin-heading"><%= __('create-account-welcome') %></h2>
+                <md-content class="md-no-momentum">
+                    <!-- N A M E -->
+                    <md-input-container class="md-icon-float md-block">
+                        <label>Your full name</label>
+                        <md-icon class="name"> face </md-icon>
+                        <input name="name" ng-model="user.name" type="text" required minlength="5" md-maxlength="20">
+                        <div ng-messages="signup.name.$error"  ng-show="signup.name.$dirty" ng-messages-multiple>
+                            <div ng-message="required">This is required.</div>
+                            <div ng-message="minlength">The name must have 5 characters at least</div>
+                            <div ng-message="md-maxlength">The name has to be less than 20 characters long.</div>
+                        </div>
+                    </md-input-container>
+                    
+                    <md-input-container class="md-block">
+                        <label>Your Email address</label>
+                        <md-icon class="email">email</md-icon>
+                        <input name="email" ng-model="user.email" type="email"  required>
+                        <div ng-messages="signup.email.$error"  ng-show="signup.email.$dirty" ng-messages-multiple>
+                            <div ng-message="required">This is required.</div>
+                            <div ng-message="email">The email is not valide</div>
+                        </div>
+                    </md-input-container>
+                
+                    <div  layout="row" layout-padding>
+                        <md-input-container class="md-block">
+                            <label>Choose a password</label>
+                            <md-icon class="email">https</md-icon>
+                            <input name="password" ng-model="user.password" type="password"  required  minlength="5" md-maxlength="20">
+                            <div ng-messages="signup.password.$error"  ng-show="signup.password.$dirty" ng-messages-multiple>
+                                <div ng-message="required">This is required.</div>
+                                <div ng-message="minlength">The name must have 5 characters at least</div>
+                                <div ng-message="md-maxlength">The name has to be less than 20 characters long.</div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container class="md-block">
+                            <label>Re-Enter password</label>
+                            <md-icon class="email">https</md-icon>
+                            <input name="confirmPassword" ng-model="user.confirmPassword" type="password"  ng-required="true" compare-to="user.password">
+                            <div ng-messages="signup.confirmPassword.$error"  ng-show="signup.confirmPassword.$dirty" ng-messages-multiple>
+                                <div ng-message="required">This is required.</div>
+                                <div ng-message="compareTo">Passwords did not matches</div>
+                                
+                            </div>
+                        </md-input-container>
+                    </div>
+                     <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+                    <div  layout="row" layout-padding>
+                        <md-button  class="md-raised md-primary" ng-disabled="signup.$invalid" >
+                            <span ng-show="!signup.loading"  ng-click="submitSignup()">Create Account</span>
+                            <span class="overlord-loading-spinner fa fa-spinner fa-spin fa-fw" ng-show="signup.loading" ></span>
+                            <span ng-show="signup.loading">Preparing your new account...</span>
+                        </md-button>
+                    </div>
+                </md-content>
+                
+                
+            </form>
         </div>
     </div>
-    <md-content flex layout-padding>
-        <form ng-submit="submitSignupForm()" id="sign-up-form" class="form-signin" name="signup">
-        <h2 class="form-signin-heading">Create an account</h2>
-        <div class="row">
-
-            <!-- N A M E -->
-
-            <!-- checking whether the form "signup" with the "name" property is both $invalid AND $dirty.  If it is
-            insert the "has-error" class on the input field (i.e. insert a red border around the input field)
-            -->
-            <div class="control-group form-group col-md-12"
-            ng-class="{'has-error':signup.name.$invalid &&
-                                signup.name.$dirty}">
-            <label>Your full name</label>
-
-            <!-- For this input field make it required, and have a max length of 25 -->
-            <input type="text" class="form-control" placeholder="e.g. Nikola Tesla" name="name" ng-model="signupForm.name" ng-maxlength="50" required>
-
-            <!-- Also, if signup.name.$dirty is true, show the message depending upon the particular properties truthiness (e.g. required
-            and/or maxlength) -->
-            <span class="help-block has-error" ng-if="signup.name.$dirty">
-                <span ng-show="signup.name.$error.required">Name is required.</span>
-                <span ng-show="signup.name.$error.maxlength">The name cannot be more than 50 characters.</span>
-            </span>
-            </div>
-
-            <!-- T I T L E -->
-
-            <div class="control-group form-group col-md-12"
-            ng-class="{'has-error':signup.title.$invalid &&
-                                    signup.title.$dirty}">
-            <label>Your title</label>
-            <input type="text" class="form-control" placeholder="e.g. Genius" name="title" ng-model="signupForm.title" ng-maxlength="50" required>
-            <span class="help-block has-error" ng-if="signup.title.$dirty">
-                <span ng-show="signup.title.$error.required">Title is required.</span>
-                <span ng-show="signup.title.$error.maxlength">The name cannot be more than 50 characters.</span>
-            </span>
-            </div>
-
-            <!-- E M A I L -->
-
-            <div class="control-group form-group col-md-12"
-            ng-class="{'has-error':signup.email.$invalid &&
-                                signup.email.$dirty}">
-            <label>Your email address</label>
-            <input type="email" class="form-control" placeholder="nikola@tesla.com" name="email" ng-model="signupForm.email" required >
-            <span class="help-block has-error" ng-if="signup.email.$dirty">
-                <span ng-show="signup.email.$error.required">Email address is required.</span>
-                <span ng-show="signup.email.$error.email">Not a valid email address.</span>
-            </span>
-            </div>
-
-            <!-- P A S S W O R D -->
-
-            <div class="control-group form-group col-md-6"
-            ng-class="{'has-error':signup.password.$invalid &&
-                                signup.password.$dirty}">
-            <label>Choose a password</label>
-            <!-- Added the compareTo directive that compares the passowrds -->
-            <input type="password" class="form-control" placeholder="at least 6 characters" name="password" ng-model="signupForm.password" id="password" required ng-minlength="6" compare-to="signupForm.confirmPassword" >
-            <span class="help-block has-error" ng-if="signup.password.$dirty">
-                <span ng-show="signup.password.$error.required">Password is required.</span>
-                <span ng-show="signup.password.$error.minlength">Password must be at least 6 characters.</span>
-            </span>
-            </div>
-
-            <!-- C O N F I R M  P A S S W O R D -->
-
-            <div class="control-group form-group col-md-6">
-            <label>Re-enter your password</label>
-            <input type="password" class="form-control" placeholder="one more time" name="confirmation" ng-model="signupForm.confirmPassword" required>
-            <span class="help-block has-error" ng-if="signup.confirmation.$dirty">
-                <span ng-show="signup.password.$error.compareTo">Password must match.</span>
-                <span ng-show="signup.confirmation.$error.required">Confirmation password is required.</span>
-            </span>
-            </div>
-        </div>
-
-        <br/>
-
-        <!-- Disable signup button until the form has no errors -->
-        <button class="btn btn-primary btn-lg btn-block" type="submit" ng-disabled="signup.$invalid">
-            <span ng-show="!signupForm.loading">Create Account</span>
-            <span class="overlord-loading-spinner fa fa-spinner" ng-show="signupForm.loading" ></span>
-            <span ng-show="signupForm.loading">Preparing your new account...</span>
-        </button>
-
-        <input type="hidden" name="_csrf" value="<%= _csrf %>" />
-        </form>
-    </md-content>
+    
     <!--SCRIPTS-->
     <script src="/js/dependencies/000_sails.io.js"></script>
-    <script src="/js/dependencies/001_jquery.min.js"></script>
-    <script src="/js/dependencies/002_angular.min.js"></script>
+    <script src="/js/dependencies/001_jquery.js"></script>
+    <script src="/js/dependencies/002_angular.js"></script>
     <script src="/js/dependencies/angular-animate.js"></script>
     <script src="/js/dependencies/angular-aria.js"></script>
     <script src="/js/dependencies/angular-material.js"></script>
     <script src="/js/dependencies/angular-messages.js"></script>
+    <script src="/js/dependencies/angular-toastr.js"></script>
+    <script src="/js/dependencies/angular-toastr.tpls.js"></script>
     <script src="/js/dependencies/lodash.min.js"></script>
-    <script src="/js/dependencies/toastr.js"></script>
+    <script src="/js/public/common.js"></script>
     <script src="/js/public/signup/SignupModule.js"></script>
     <script src="/js/public/signup/SignupController.js"></script>
     <!--SCRIPTS END-->

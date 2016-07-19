@@ -1,5 +1,5 @@
 angular
-.module('ngErpSignup',['ngMaterial', 'ngMessages'])
+.module('ngErpSignup',['ngMaterial', 'ngMessages','compareTo','ngAnimate','toastr'])
 .config(function($mdIconProvider) {
     $mdIconProvider
        .iconSet('social', 'img/icons/sets/social-icons.svg', 24)
