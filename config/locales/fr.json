@@ -1,5 +1,8 @@
 {
 	"Welcome": "Bienvenue",
 	"A brand new app.": "Une toute nouvelle application.",
-    "create-account-welcome":"Creer un compte"
+    "create-account-welcome":"Creer un compte",
+    "Your full name":"Votre nom complet",
+    "Fullname is required":"Nom complet est requis",
+    "Email address is already taken by another user.":"Cette adresse email est déjà prise par un autre utilisateur"
 }

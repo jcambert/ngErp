@@ -34,6 +34,7 @@ var jsFilesToInject = [
   //Declare modules before all other angular public js 
   'js/public/common.js',
   'js/public/signup/SignupModule.js',
+  'js/public/homepage/HomepageModule.js',
   
   // All of the rest of your client-side js files
   // will be injected here in no particular order.

@@ -39,11 +39,11 @@
                 <md-content class="md-no-momentum">
                     <!-- N A M E -->
                     <md-input-container class="md-icon-float md-block">
-                        <label>Your full name</label>
+                        <label><%= __('Your full name') %></label>
                         <md-icon class="name"> face </md-icon>
                         <input name="name" ng-model="user.name" type="text" required minlength="5" md-maxlength="20">
                         <div ng-messages="signup.name.$error"  ng-show="signup.name.$dirty" ng-messages-multiple>
-                            <div ng-message="required">This is required.</div>
+                            <div ng-message="required"><%= __('Fullname is required') %></div>
                             <div ng-message="minlength">The name must have 5 characters at least</div>
                             <div ng-message="md-maxlength">The name has to be less than 20 characters long.</div>
                         </div>
@@ -106,9 +106,13 @@
     <script src="/js/dependencies/angular-messages.js"></script>
     <script src="/js/dependencies/angular-toastr.js"></script>
     <script src="/js/dependencies/angular-toastr.tpls.js"></script>
+    <script src="/js/dependencies/angular-ui-router.js"></script>
     <script src="/js/dependencies/lodash.min.js"></script>
+    <script src="/js/dependencies/sailsResource.js"></script>
     <script src="/js/public/common.js"></script>
     <script src="/js/public/signup/SignupModule.js"></script>
+    <script src="/js/public/homepage/HomepageModule.js"></script>
+    <script src="/js/public/homepage/HomepageController.js"></script>
     <script src="/js/public/signup/SignupController.js"></script>
     <!--SCRIPTS END-->
   </body>

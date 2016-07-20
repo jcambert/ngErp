@@ -11,11 +11,22 @@ will ultimately load to make the ng-cloak display none until $compile thing runs
 @label-email-color:green;
 @label-phone-color:orange;
 
-md-input-container{
-    md-icon{
-        min-height: @label-icon-size;
-    }
+md-toolbar {
+  .md-button {
+    border-radius: 99%; // round toolbar buttons
+  }
 }
+.md-toolbar-tools-bottom {
+  font-size: small;
+  & :last-child {
+    opacity: 0.8;
+  }
+}
+md-toolbar:not(.md-hue-1),
+.md-fab {
+  fill: #fff;
+}
+
 md-input-container:not(.md-input-invalid) {
  > md-icon.name{
      color:@label-name-color;
