@@ -32,7 +32,8 @@ var jsFilesToInject = [
   'js/dependencies/**/*.js',
   
   //Declare modules before all other angular public js 
-  'js/public/common.js',
+  'js/public/utils.js',
+  'js/public/ngErpModule.js',
   'js/public/signup/SignupModule.js',
   'js/public/homepage/HomepageModule.js',
   

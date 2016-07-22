@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="ngErp" lang="fr">
   <head>
-    <title><%=typeof title == 'undefined' ? 'New Sails App' : title%></title>
+    <title><%=sails.config.application.name + ' v' + sails.config.application.version %></title>
 
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--
         Stylesheets and Preprocessors
         ==============================
@@ -35,7 +35,7 @@
     <!--STYLES END-->
   </head>
 
-  <body>
+  <body ng-controller="MainController" ng-cloak>
     <%- body %>
 
 
@@ -62,7 +62,7 @@
     -->
 
     <!--TEMPLATES-->
-    
+    <script type="text/javascript" src="/jst.js"></script>
     <!--TEMPLATES END-->
 
 
@@ -102,9 +102,11 @@
     <script src="/js/dependencies/angular-ui-router.js"></script>
     <script src="/js/dependencies/lodash.min.js"></script>
     <script src="/js/dependencies/sailsResource.js"></script>
-    <script src="/js/public/common.js"></script>
+    <script src="/js/public/utils.js"></script>
+    <script src="/js/public/ngErpModule.js"></script>
     <script src="/js/public/signup/SignupModule.js"></script>
     <script src="/js/public/homepage/HomepageModule.js"></script>
+    <script src="/js/public/directives/button.js"></script>
     <script src="/js/public/homepage/HomepageController.js"></script>
     <script src="/js/public/signup/SignupController.js"></script>
     <!--SCRIPTS END-->
