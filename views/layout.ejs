@@ -33,6 +33,9 @@
     <link rel="stylesheet" href="/styles/angular-toastr.css">
     <link rel="stylesheet" href="/styles/importer.css">
     <!--STYLES END-->
+     <script type="text/javascript">
+        window.SAILS_LOCALS = { _csrf: "<%= _csrf %>" };
+    </script>
   </head>
 
   <body ng-controller="MainController" ng-cloak>

@@ -44,6 +44,16 @@ module.exports = {
     // url for gravatar
     gravatarUrl: {
       type: 'string'
+    },
+    
+    settings:{
+        model:'UserSettings',
+        unique:true
+    },
+    
+    activities:{
+        collection:'UserActivity',
+        via:'user'
     }
   }
 };

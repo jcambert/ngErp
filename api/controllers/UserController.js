@@ -6,6 +6,13 @@
  */
 
 module.exports = {
+    
+    login:function(req,res){
+        
+    },
+    logout:function(req,res){
+        
+    },
 	 /**
    * Sign up for a user account.
    */
