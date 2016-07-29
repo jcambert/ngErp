@@ -7,16 +7,44 @@
 
 module.exports = {
     
-    login:function(req,res){
-        
+    login:function(req,res,next){
+        sails.log.info(req.param('email') + ' try to login');
+        erp.user.login(req.body)
+            .then(function(user){
+                req.session.user=user;
+                req.session.authenticated=true;
+                req.session.trueHuman = true;
+                sails.log.info(user.name + ' is logged in');
+                sails.log.debug(req.session);
+                return res.json({
+                    user: user
+                });
+            })
+            .catch(function(err){
+                 return res.negotiate(err);
+            });
+       
     },
     logout:function(req,res){
         
     },
+    signup:function(req,res,next){
+        sails.log.info('Try to signup new user');
+        erp.user.signup(req.body)
+            .then(function(user){
+                sails.log.info('new user as '+ user.email +' was signup');
+                 return res.json({
+                    user: user
+                });
+            })
+             .catch(function(err){
+                 return res.negotiate(err);
+            });
+    }
 	 /**
    * Sign up for a user account.
-   */
-  signup: function(req, res) {
+   *//*
+  signup: function(req, res,next) {
     sails.log.debug("signup a user");
     var Passwords = require('machinepack-passwords');
 
@@ -75,6 +103,6 @@ module.exports = {
         });
       }
     });
-  },
+  },*/
 };
 
