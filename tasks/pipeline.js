@@ -33,8 +33,10 @@ var jsFilesToInject = [
   
   //Declare modules before all other angular public js 
   'js/public/utils.js',
+  'js/public/services/ModelModule.js',
   'js/public/ngErpModule.js',
   'js/public/signup/SignupModule.js',
+  'js/public/signin/SigninModule.js',
   'js/public/homepage/HomepageModule.js',
   
   // All of the rest of your client-side js files

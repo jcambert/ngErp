@@ -1,5 +1,5 @@
 angular
-.module('ngErpSignup',['ngErpModels','ngMaterial', 'ngMessages','compareTo','ngAnimate','toastr'])
+.module('ngErpSignin',['ngErpModels','ngMaterial', 'ngMessages','compareTo','ngAnimate','toastr'])
 .config(function($mdIconProvider,sailsResourceProvider) {
     
     $mdIconProvider

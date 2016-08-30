@@ -26,7 +26,19 @@ module.exports = {
        
     },
     logout:function(req,res){
-        
+        if(!req.session.authenticated)return res.goToHomePage();
+        sails.log.info(req.param('email') + ' try to logout');
+        erp.user.logout(req.session)
+            .then(function(){
+                req.session.user=null;
+                req.session.authenticated = false;
+                req.session.trueHuman = false;
+                sails.log(req.param('email') + ' is logout');
+                return res.goToHomePage();
+            })
+            .catch(function(err){
+                return res.negotiate(err);
+            });
     },
     signup:function(req,res,next){
         sails.log.info('Try to signup new user');

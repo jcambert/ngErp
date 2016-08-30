@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sign Up for Activity Overlord (angular)</title>
+    <title>Signin for Activity Overlord (angular)</title>
 
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -20,15 +20,15 @@
 
   </head>
 
-  <body ng-app="ngErpSignup" ng-controller="SignupController" ng-cloak>
+  <body ng-app="ngErpSignin" ng-controller="SigninController" ng-cloak>
     <md-toolbar >
         <div class="md-toolbar-tools">
             <span flex></span>
-            <md-button  ng-click="wantSignin()" class="md-raised" aria-label="Sign In">
+            <!--<md-button  ng-click="wantSignin()" class="md-raised" aria-label="Sign In">
                 <span ng-show="!loginForm.loading">Sign in</span>
                 <span ng-show="loginForm.loading" class="fa fa-spinner"></span>
                 <span ng-show="loginForm.loading">Signing up...</span>
-            </md-button>
+            </md-button>-->
 
         </div>
     </md-toolbar>
@@ -37,19 +37,7 @@
             <form ng-submit="submitSignupForm()" id="sign-up-form" class="form-signin" name="signup">
                 <h2 class="form-signin-heading"><%= __('create-account-welcome') %></h2>
                 <md-content class="md-no-momentum">
-                    <!-- N A M E -->
-                    <md-input-container class="md-icon-float md-block">
-                        <label><%= __('Your full name') %></label>
-                        <md-icon class="name"> face </md-icon>
-                        <input name="name" ng-model="user.name" type="text" required minlength="5" md-maxlength="20">
-                        <div ng-messages="signup.name.$error"  ng-show="signup.name.$dirty" ng-messages-multiple>
-                            <div ng-message="required"><%= __('Fullname is required') %></div>
-                            <div ng-message="minlength">The name must have 5 characters at least</div>
-                            <div ng-message="md-maxlength">The name has to be less than 20 characters long.</div>
-                        </div>
-                    </md-input-container>
-                    
-                    <md-input-container class="md-block">
+                   <md-input-container class="md-block">
                         <label>Your Email address</label>
                         <md-icon class="email">email</md-icon>
                         <input name="email" ng-model="user.email" type="email"  required>
@@ -59,34 +47,23 @@
                         </div>
                     </md-input-container>
                 
-                    <div  layout="row" layout-padding>
-                        <md-input-container class="md-block">
-                            <label>Choose a password</label>
-                            <md-icon class="email">https</md-icon>
-                            <input name="password" ng-model="user.password" type="password"  required  minlength="5" md-maxlength="20">
-                            <div ng-messages="signup.password.$error"  ng-show="signup.password.$dirty" ng-messages-multiple>
-                                <div ng-message="required">This is required.</div>
-                                <div ng-message="minlength">The name must have 5 characters at least</div>
-                                <div ng-message="md-maxlength">The name has to be less than 20 characters long.</div>
-                            </div>
-                        </md-input-container>
-                        <md-input-container class="md-block">
-                            <label>Re-Enter password</label>
-                            <md-icon class="email">https</md-icon>
-                            <input name="confirmPassword" ng-model="user.confirmPassword" type="password"  ng-required="true" compare-to="user.password">
-                            <div ng-messages="signup.confirmPassword.$error"  ng-show="signup.confirmPassword.$dirty" ng-messages-multiple>
-                                <div ng-message="required">This is required.</div>
-                                <div ng-message="compareTo">Passwords did not matches</div>
-                                
-                            </div>
-                        </md-input-container>
-                    </div>
+                    <md-input-container class="md-block">
+                        <label>Type your password</label>
+                        <md-icon class="email">https</md-icon>
+                        <input name="password" ng-model="user.password" type="password"  required  minlength="5" md-maxlength="20">
+                        <div ng-messages="signup.password.$error"  ng-show="signup.password.$dirty" ng-messages-multiple>
+                            <div ng-message="required">This is required.</div>
+                            <div ng-message="minlength">The name must have 5 characters at least</div>
+                            <div ng-message="md-maxlength">The name has to be less than 20 characters long.</div>
+                        </div>
+                    </md-input-container>
+                    
                      <input type="hidden" name="_csrf" value="<%= _csrf %>" />
                     <div  layout="row" layout-padding>
                         <md-button  class="md-raised md-primary" ng-disabled="signup.$invalid" >
-                            <span ng-show="!signup.loading"  ng-click="submitSignup()">Create Account</span>
+                            <span ng-show="!signup.loading"  ng-click="submitSignin()">Enter</span>
                             <span class="overlord-loading-spinner fa fa-spinner fa-spin fa-fw" ng-show="signup.loading" ></span>
-                            <span ng-show="signup.loading">Preparing your new account...</span>
+                            <span ng-show="signup.loading">Checking your account...</span>
                         </md-button>
                     </div>
                 </md-content>
