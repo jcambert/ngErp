@@ -1,5 +1,5 @@
 angular.module('ngErpModels')
-.service('userService',['$log','sailsResource', function($log,sailsResource){
+.service('userService',['$log','$q', 'sailsResource', function($log,$q,sailsResource){
     var self=this;
     var User=sailsResource('user',{
         signup:{method:'POST',url:'/signup/'},
@@ -24,7 +24,16 @@ angular.module('ngErpModels')
     }
     
     self.signin = function(email,password){
-        return User.login({email:email,password:password});
+        var deferred = $q.defer();
+        User.login({email:email,password:password},
+            function(user){
+                deferred.resolve(user);
+            },
+            function(err){
+                deferred.reject(err);
+            }
+        );
+        return deferred.promise;
     }
     
 }])

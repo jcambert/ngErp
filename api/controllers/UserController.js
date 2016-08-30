@@ -9,7 +9,7 @@ module.exports = {
     
     login:function(req,res,next){
         sails.log.info(req.param('email') + ' try to login');
-        erp.user.login(req.body)
+        erp.user.login(req.param)
             .then(function(user){
                 req.session.user=user;
                 req.session.authenticated=true;

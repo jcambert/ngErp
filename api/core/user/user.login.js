@@ -11,12 +11,14 @@ var activity = function(params,user){
 }
 
 module.exports = function login(params){
-    return get(params)
+    sails.log.debug(params('email')+' : '+params('password'));
+    return get(params('email'))
         .then(function(user){
             sails.log.info('login user:'+user   );
-            params.encrypted = user.encryptedPassword;
+            var p={password:params('password'),encrypted:user.encryptedPassword}
+            //params.encrypted = user.encryptedPassword;
             return new Promise(function(resolve,reject){
-               check(params)
+               check(p)
                 .then(function(){
                     params.activity='logged in at ' +new Date().toLocaleString(); 
                     activity(params,user).then(function(activity){ resolve(user);},function(err){ resolve(user);})

@@ -10,7 +10,7 @@ module.exports = {
     
         sails.log(req.session);
         // If not logged in, show the public view.
-        if (!req.session.me) {
+        if (!req.session.user) {
             sails.log('attempt to show dashboard to a non logged user');
             res.locals.layout='layout';
             return res.view('homepage',{layout:'layout'});
@@ -18,7 +18,7 @@ module.exports = {
 
         // Otherwise, look up the logged-in user and show the logged-in view,
         // bootstrapping basic user data in the HTML sent from the server
-        User.findOne(req.session.me, function (err, user){
+        User.findOne(req.session.user, function (err, user){
             if (err) {
                 return res.negotiate(err);
             }
