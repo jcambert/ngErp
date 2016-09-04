@@ -9,6 +9,7 @@ var activity = function(params,user){
 }
 
 module.exports = function logout(params){
+    sails.log.debug('LOGOUT');
     return get(params.user)
         .then(function(user){
             sails.log.info('logout user:'+user   );

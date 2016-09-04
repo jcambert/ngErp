@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="ngErp" lang="fr">
+<html ng-app="<%= application %>" lang="fr">
   <head>
     <title><%=sails.config.application.name + ' v' + sails.config.application.version %></title>
 
@@ -38,7 +38,7 @@
     </script>
   </head>
 
-  <body ng-controller="MainController" ng-cloak>
+  <body ng-controller="<%= controller %>" ng-cloak>
     <%- body %>
 
 
@@ -111,6 +111,7 @@
     <script src="/js/public/signup/SignupModule.js"></script>
     <script src="/js/public/signin/SigninModule.js"></script>
     <script src="/js/public/homepage/HomepageModule.js"></script>
+    <script src="/js/public/dashboard/DashboardController.js"></script>
     <script src="/js/public/directives/button.js"></script>
     <script src="/js/public/homepage/HomepageController.js"></script>
     <script src="/js/public/services/UserService.js"></script>

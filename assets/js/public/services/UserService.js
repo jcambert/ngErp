@@ -3,7 +3,9 @@ angular.module('ngErpModels')
     var self=this;
     var User=sailsResource('user',{
         signup:{method:'POST',url:'/signup/'},
-        login:{method:'GET',url:'/login/:email/:password'}
+        login:{method:'GET',url:'/login/:email/:password'},
+        logout:{method:'GET',url:'/logout'},
+        session:{method:'GET',url:'/session'}
         //getByEmailAndPassword:{method:'GET',url:'/user/'}
     })
     
@@ -36,4 +38,13 @@ angular.module('ngErpModels')
         return deferred.promise;
     }
     
+    self.logout = function(){
+        
+    }
+    
+    self.session = function(){
+        var d = $q.defer();
+        User.session({},function(session){d.resolve(session.session);},function(err){d.reject(err)});
+        return d.promise;
+    }
 }])

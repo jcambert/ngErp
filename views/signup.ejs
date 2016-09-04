@@ -1,33 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Sign Up for Activity Overlord (angular)</title>
 
-    <!-- Viewport mobile tag for sensible mobile support -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--STYLES-->
-    <link rel="stylesheet" href="/styles/angular-material.css">
-    <link rel="stylesheet" href="/styles/angular-toastr.css">
-    <link rel="stylesheet" href="/styles/importer.css">
-    <!--STYLES END-->
-
-    <!--Added this so the client has access to the csrf tag and it's grabbed first service side on every page -->
-    <script type="text/javascript">
-    window.SAILS_LOCALS = { _csrf: "<%= _csrf %>" };
-    </script>
-
-  </head>
-
-  <body ng-app="ngErpSignup" ng-controller="SignupController" ng-cloak>
     <md-toolbar >
         <div class="md-toolbar-tools">
+            <span><%=sails.config.application.name %><%= ' - v' + sails.config.application.version %></span>
+            <md-button class="toolbar-button" aria-label="Home" ng-href="/">
+                <md-icon >home</md-icon>
+            </md-button>
             <span flex></span>
-            <md-button  ng-click="wantSignin()" class="md-raised" aria-label="Sign In">
-                <span ng-show="!loginForm.loading">Sign in</span>
-                <span ng-show="loginForm.loading" class="fa fa-spinner"></span>
-                <span ng-show="loginForm.loading">Signing up...</span>
+             <md-button class="toolbar-button" aria-label="Settings" ng-href="/signin">
+                <md-icon >account_circle</md-icon>
             </md-button>
 
         </div>
@@ -95,31 +75,4 @@
             </form>
         </div>
     </div>
-    
-    <!--SCRIPTS-->
-    <script src="/js/dependencies/000_sails.io.js"></script>
-    <script src="/js/dependencies/001_jquery.js"></script>
-    <script src="/js/dependencies/002_angular.js"></script>
-    <script src="/js/dependencies/angular-animate.js"></script>
-    <script src="/js/dependencies/angular-aria.js"></script>
-    <script src="/js/dependencies/angular-material.js"></script>
-    <script src="/js/dependencies/angular-messages.js"></script>
-    <script src="/js/dependencies/angular-toastr.js"></script>
-    <script src="/js/dependencies/angular-toastr.tpls.js"></script>
-    <script src="/js/dependencies/angular-ui-router.js"></script>
-    <script src="/js/dependencies/lodash.min.js"></script>
-    <script src="/js/dependencies/sailsResource.js"></script>
-    <script src="/js/public/utils.js"></script>
-    <script src="/js/public/services/ModelModule.js"></script>
-    <script src="/js/public/ngErpModule.js"></script>
-    <script src="/js/public/signup/SignupModule.js"></script>
-    <script src="/js/public/signin/SigninModule.js"></script>
-    <script src="/js/public/homepage/HomepageModule.js"></script>
-    <script src="/js/public/directives/button.js"></script>
-    <script src="/js/public/homepage/HomepageController.js"></script>
-    <script src="/js/public/services/UserService.js"></script>
-    <script src="/js/public/signin/SigninController.js"></script>
-    <script src="/js/public/signup/SignupController.js"></script>
-    <!--SCRIPTS END-->
-  </body>
-</html>
+   

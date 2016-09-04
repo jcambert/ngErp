@@ -10,6 +10,9 @@ module.exports = function goToHomePage (statusCode){
   if (req.wantsJSON) {
     return res.send(statusCode||200);
   }
+  res.locals.application = sails.config.application.angular.application;
+  res.locals.controller = sails.config.application.angular.publicController;
+ return res.view('homepage'/*,{layout:'layout'}*/);
   // or redirect to the home page
-  return res.redirect('/');
+  //return res.redirect('/');
 };

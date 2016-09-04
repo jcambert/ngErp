@@ -1,51 +1,34 @@
+<md-sidenav md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left"
+            class="md-whiteframe-z2 md-sidenav-left">
+</md-sidenav>
 <div layout="column" flex>
-    <section style="background-color:red;">
-        <md-toolbar ng-show="!showSearch">
-            <div class="md-toolbar-tools">
-                <h2><span><%=sails.config.application.name %></span></h2><h5><%= ' v' + sails.config.application.version %></h5></span>
-               
-                <md-button class="md-icon-button">
-                    <md-icon>menu</md-icon>
-                     <md-tooltip ng-if="settings.showTooltip" md-visible="showTooltips" md-direction="right">Expand Menu</md-tooltip>
-                </md-button>
-                <a md-ink-ripple="" ng-click="openAside()" class="navbar-item pull-left visible-xs visible-sm" tabindex="0" aria-hidden="false"><i class="mdi-navigation-menu i-24"></i><div class="md-ripple-container"></div></a>
-                <span flex></span>
-                <md-button class="md-icon-button">
-                    <md-icon>search</md-icon>
-                </md-button>
-                <md-button class="md-icon-button">
-                    <md-icon>perm_identity</md-icon>
-                </md-button>
-                <md-button class="md-icon-button" aria-label="Search" >
-                    <md-icon>input</md-icon>
-                </md-button>
-                <md-button class="md-icon-button" aria-label="Open Settings" ng-click="showListBottomSheet($event)">
-                    <md-icon>more_vert</md-icon>
-                </md-button>
-            </div>
-        </md-toolbar>
-    </section>
-    <section style="background-color:green;" layout="row" flex>
-        <md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-disable-backdrop="" md-whiteframe="4">
-            
-            <md-toolbar class="md-theme-indigo">
-                <h1 class="md-toolbar-tools">Sidenav Left</h1>
-            </md-toolbar>
-            <md-content layout-padding="" >
-                <md-button ng-click="close()" class="md-primary" hide-gt-md="">
-                Close Sidenav Left
-                </md-button>
-                <p hide="" show-gt-md="">
-                This sidenav is locked open on your device. To go back to the default behavior,
-                narrow your display.
-                </p>
-            </md-content>
+    
+    <md-toolbar layout="row" layout-align="center center">
+        <section layout-align="start center" flex>
+        <span><%=sails.config.application.name %><%= ' - v' + sails.config.application.version %></span>  
+        </section>
+        
+        <section layout-align="end center" >
+            <md-button class="toolbar-button" aria-label="Search" >
+                <md-icon >search</md-icon>
+            </md-button>
+            <md-button class="toolbar-button" aria-label="Notifications">
+                <md-icon >notifications</md-icon>
+                <span class="notifications-label">7</span>
+            </md-button>
+            <md-button class="toolbar-button" aria-label="Settings" ng-click="vm.toggleRightSidebar()">
+                <md-icon >menu</md-icon>
+            </md-button>
+             <md-button class="toolbar-button" aria-label="Settings" ng-href="/signin">
+                <md-icon >account_circle</md-icon>
+            </md-button>
+             <md-button class="toolbar-button" aria-label="Settings" ng-href="/signup">
+                <md-icon >person_add</md-icon>
+            </md-button>
+        </section>
+    </md-toolbar>
 
-        </md-sidenav>
-        <md-content flex="" layout-padding="" >
-            CONTENT
-        </md-content>
-     
-    </section>
-
+    <md-content flex class="md-padding page-content">
+        <div ui-view></div>
+    </md-content>
 </div>

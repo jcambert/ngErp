@@ -5,6 +5,7 @@ module.exports.get = require('./user.get.js');
 module.exports.gravatar = require('./user.gravatar.js');
 module.exports.isunique = require('./user.isunique.js');
 module.exports.login = require('./user.login.js');
+module.exports.logout = require('./user.logout.js');
 module.exports.signup = require('./user.signup.js');
 
 

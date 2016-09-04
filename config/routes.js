@@ -35,14 +35,14 @@ module.exports.routes = {
   //'/': {
 //    view: 'homepage'
  // }
- 'GET /signup':{view: 'signup'},
- 'GET /signin':{view: 'signin'},
+ 'GET /signup':'PageController.signup', //{view: 'signup'},
+ 'GET /signin':{view: 'signin',locals:{application:'ngErpSignin',controller:'SigninController'}},
  'GET /': 'PageController.showHomePage',
  
  'POST /signup': 'UserController.signup',
  'GET /login/:email/:password': 'UserController.login',
- 'GET /logout': 'UserController.logout'
-
+ 'GET /logout': 'UserController.logout',
+ 'GET /session': 'UserController.session'
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

@@ -6,6 +6,9 @@
  */
 
 module.exports = {
+    session:function(req,res){
+        return res.json({session:req.session});
+    },
     
     login:function(req,res,next){
         sails.log.info(req.param('email') + ' try to login');
@@ -27,7 +30,7 @@ module.exports = {
     },
     logout:function(req,res){
         if(!req.session.authenticated)return res.goToHomePage();
-        sails.log.info(req.param('email') + ' try to logout');
+        sails.log.info(req.session.user.email + ' try to logout');
         erp.user.logout(req.session)
             .then(function(){
                 req.session.user=null;
