@@ -38,16 +38,23 @@ angular.module('ngErp',['ngMaterial', 'ngMessages','compareTo','ngAnimate','toas
     $stateProvider
       .state('home', {
         url: '',
-        templateUrl: 'app/views/main.html',
+        templateUrl: 'templates/main.html',
         controller: 'MainController',
-        controllerAs: 'vm',
         abstract: true
       })
-    
-    
+     .state('home.dashboard', {
+        url: '/dashboard',
+        templateUrl: 'templates/dashboard.html',
+        data: {
+          title: 'Dashboard'
+        }
+      })
+    ;
+    $urlRouterProvider.otherwise('/dashboard');
 
 }])
-.run(function(){
+.run(['$state',function($state){
     console.log('ngErp is running...');
-})
+    $state.go('home.dashboard');
+}])
 ;
