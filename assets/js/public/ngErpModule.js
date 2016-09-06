@@ -6,9 +6,7 @@ angular.module('ngErp',['ngMaterial', 'ngMessages','compareTo','ngAnimate','toas
     $scope.settings.showTooltip=Settings.showTooltip;
     
 }])
-.controller('PublicController',[function(){
-    
-}])
+
 .provider('Settings',[function(){
    var self=this;
    self.settings={};

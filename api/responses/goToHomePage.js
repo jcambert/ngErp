@@ -12,7 +12,7 @@ module.exports = function goToHomePage (statusCode){
   }
   res.locals.application = sails.config.application.angular.application;
   res.locals.controller = sails.config.application.angular.publicController;
- return res.view('homepage'/*,{layout:'layout'}*/);
+  //return res.view('homepage'/*,{layout:'layout'}*/);
   // or redirect to the home page
-  //return res.redirect('/');
+  return res.redirect('/');
 };

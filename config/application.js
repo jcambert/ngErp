@@ -3,8 +3,18 @@ module.exports.application = {
     name:'NgErp',
     version:'0.0.1',
     angular:{
-        application:'ngErp',
-        publicController:'PublicController'
+        erp:{
+            application:'ngErp',
+            controller:'MainController'
+        },
+        public:{
+            application:'ngPublic',
+            controller:'PublicController'
+        },
+        signup:{
+            application:'ngErpSignup',
+            controller:'SignupController'
+        }
     }
    
 };

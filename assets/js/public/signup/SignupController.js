@@ -1,6 +1,6 @@
 
 angular.module('ngErpSignup')
-.controller('SignupController',['$log','$scope','toastr','userService',function($log,$scope,toastr,user){
+.controller('SignupController',['$log','$scope','$window','$timeout','toastr','userService',function($log,$scope,$window,$timeout,toastr,user){
     $scope.user={
       name:'ambert',
       email:'jc.ambert@free.fr',  
@@ -17,7 +17,15 @@ angular.module('ngErpSignup')
         
         toastr.success('Try to signup');
         
-        user.signup($scope.user).then(function(u){ $log.log('userService.signup Ok');toastr.success('User is created!');},function(err){$log.log('userService.signup failed');toastr.error(err.body);});
+        user.signup($scope.user).then(
+            function(u){ 
+                $log.log('userService.signup Ok');
+                toastr.success('User is created!');
+                toastr.success('Redirecting to signin page')
+                $timeout(function(){$window.location='/signin'},2000);
+            },
+            function(err){$log.log('userService.signup failed');toastr.error(err.body);}
+        );
         //,function(u){toastr.success('User is created!');},function(err){toastr.error(err.body);});
         /*
         var User = sailsResource('user');

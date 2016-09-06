@@ -1,6 +1,6 @@
 
 angular.module('ngErpSignin')
-.controller('SigninController',['$log','$scope','$window','toastr','userService',function($log,$scope,$window,toastr,user){
+.controller('SigninController',['$log','$scope','$window','$timeout','toastr','userService',function($log,$scope,$window,$timeout,toastr,user){
     $scope.user={
       name:'ambert',
       email:'jc.ambert@free.fr',  
@@ -20,8 +20,10 @@ angular.module('ngErpSignin')
         
         user.signin($scope.user.email,$scope.user.password).then(
             function(u){
-                 $log.log('userService.signin Ok');toastr.success('User is logged!');
-                 $window.location = '/';
+                 $log.log('userService.signin Ok');
+                 toastr.success('User is logged!');
+                 toastr.success('Redirecting to Dashboard');
+                 $timeout(function(){$window.location = '/';},2000);
             },
             function(err){
                 $log.log('userService.signin failed');toastr.error(err.body);
