@@ -15,7 +15,11 @@ module.exports = {
       required: true
     },
 
-
+    enable:{
+        type :'boolean',
+        required:true,
+        defaultsTo:true
+    },
 
     // The user's email address
     // e.g. nikola@tesla.com

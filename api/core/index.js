@@ -9,7 +9,8 @@ erp.load = function load() {
     // require all Erp dependencies
     erp.user = require('./user/index.js');
     erp.useractivity = require('./useractivity/index.js');
-
+    erp.response = require('./response/index.js');
+    
     // get Erp version number
     try {
         var json = JSON.parse(fs.readFileSync('package.json'));

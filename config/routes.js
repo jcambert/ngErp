@@ -40,8 +40,8 @@ module.exports.routes = {
  'GET /': 'PageController.showHomePage',
  
  'POST /signup': 'UserController.signup',
- 'GET /login/:email/:password': 'UserController.login',
- 'GET /logout': 'UserController.logout',
+ 'GET /signin/:email/:password': 'UserController.signin',
+ 'GET /signout': 'UserController.signout',
  'GET /session': 'UserController.session'
   /***************************************************************************
   *                                                                          *

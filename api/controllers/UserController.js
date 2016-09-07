@@ -10,9 +10,9 @@ module.exports = {
         return res.json({session:req.session});
     },
     
-    login:function(req,res,next){
+    signin:function(req,res,next){
         sails.log.info(req.param('email') + ' try to login');
-        erp.user.login(req.param)
+        erp.user.login(req.param('email'),req.param('password'))
             .then(function(user){
                 req.session.user=user;
                 req.session.authenticated=true;
@@ -25,10 +25,13 @@ module.exports = {
             })
             .catch(function(err){
                  return res.negotiate(err);
+            })
+            .error(function(err){
+                return res.negotiate(err);
             });
        
     },
-    logout:function(req,res){
+    signout:function(req,res){
         if(!req.session.authenticated)return res.goToHomePage();
         sails.log.info(req.session.user.email + ' try to logout');
         erp.user.logout(req.session)

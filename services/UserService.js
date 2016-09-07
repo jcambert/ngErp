@@ -38,9 +38,6 @@ angular.module('ngErpModels')
         return deferred.promise;
     }
     
-    /*self.logout = function(){
-        
-    }*/
     
     self.session = function(){
         var d = $q.defer();

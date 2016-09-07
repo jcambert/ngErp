@@ -24,6 +24,9 @@ module.exports = function notFound (data, options) {
   var res = this.res;
   var sails = req._sails;
 
+  // apply public response if not angular application and controller sets
+  erp.response.publicResponse(res);
+  
   // Set status code
   res.status(404);
 

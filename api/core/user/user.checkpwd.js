@@ -16,7 +16,7 @@ module.exports = function checkpwd(params){
             },
             // Password attempt does not match already-encrypted version
             incorrect: function (){
-                reject('Bad password')
+                reject(new Error('Bad password'))
             },
             // OK.
             success: function (){
