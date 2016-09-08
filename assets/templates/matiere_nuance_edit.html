@@ -1,0 +1,55 @@
+<md-dialog aria-label="">
+  <form name="frmnuance" ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2 ng-if="mode=='edit'">Edition de la nuance {{matiere.nom}}</h2>
+        <h2 ng-if="mode=='add'">Ajout d'une nuance</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon aria-label="Close dialog">close</md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+        <md-input-container class="md-block">
+            <label>Nom</label>
+            <md-icon >blur_on</md-icon>
+            <input name="nom" ng-model="nuance.nom" type="string"  required>
+            <div ng-messages="frmnuance.nom.$error"  ng-show="frmnuance.nom.$dirty" ng-messages-multiple>
+                <div ng-message="required">This is required.</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>Matiere</label>
+            <md-icon >blur_on</md-icon>
+            <md-select placeholder="Assign Material" ng-model="nuance.matiere"  style="min-width: 200px;" name="matiere">
+                <md-option ng-value="matiere.id" ng-repeat="matiere in matieres" ng-model-option="{trackBy: 'matiere.id' }" ng-selected="{{ matiere.id === nuance.matiere.id ? 'true' : 'false' }}">{{matiere.nom}}</md-option>
+            </md-select>
+            <div ng-messages="frmnuance.matiere.$error"  ng-show="frmnuance.matiere.$dirty" ng-messages-multiple>
+                <div ng-message="required">This is required.</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>Prix &euro;/Kg</label>
+            <md-icon >blur_on</md-icon>
+            <input name="prix" ng-model="nuance.prix" type="number"  required min="0">
+            <div ng-messages="frmnuance.prix.$error"  ng-show="frmnuance.prix.$dirty" ng-messages-multiple>
+                <div ng-message="required">This is required.</div>
+                <div ng-message="min">This must be greater than 0.</div>
+            </div>
+        </md-input-container>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      
+      <span flex></span>
+      <md-button ng-click="cancel()">
+       <md-icon>cancel</md-icon>
+      </md-button>
+      <md-button ng-click="ok()">
+          <md-icon>check</md-icon>
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

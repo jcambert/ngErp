@@ -58,6 +58,11 @@ module.exports = {
     activities:{
         collection:'UserActivity',
         via:'user'
+    },
+    
+    dps:{
+        collection:'dp',
+        via:'deviseur'
     }
   }
 };
