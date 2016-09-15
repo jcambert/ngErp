@@ -40,7 +40,8 @@ angular.module('ngErp')
         var Contact = sailsResource('contact');
         self.contact = new Contact();
         //if(angular.isDefined( $stateParams.clientid))
-            self.contact.client = $stateParams.clientid;
+            self.contact.client = Number($stateParams.clientid);
+            console.dir(self.contact);
     };
     
     self.load = function(id){
