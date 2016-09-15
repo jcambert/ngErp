@@ -1,153 +1,41 @@
 'use strict';
 angular.module('ngErp',['ngMaterial', 'ngMessages','compareTo','ngAnimate','toastr','sailsResource','ngErpModels','ui.router','md.data.table'])
 .controller('MainController',['$scope','Settings',function($scope,Settings){
-    console.dir(Settings);
+    
     $scope.settings={};
     $scope.settings.showTooltip=Settings.showTooltip;
-    
-}])
-.controller('MatiereController',['$log','$scope','sailsResource','$mdDialog',function($log,$scope,sailsResource,$mdDialog){
-    var self=$scope;
-     
-     self.customFullscreen = false;
-
-     function loadMaterials(){
-         self.matieres = sailsResource('matiere').query();
-     }
-     function showDialog(mode,ev,matiere){
-         
-         return $mdDialog.show({
-            controller: 'MatiereEditController',
-            templateUrl: 'templates/matiere_edit.html',
-            parent: angular.element(document.body),
-            targetEvent: ev,
-            clickOutsideToClose:true,
-            fullscreen: $scope.customFullscreen,   // Only for -xs, -sm breakpoints.
-            //preserveScope: true,
-            locals:{
-                mode:mode,
-                matiere:matiere
-            }
-        });
-     }
-     
-     self.edit = function(ev,matiere){
-         $log.log('want edit matiere:'+matiere.id);
-
-        showDialog('edit',ev,matiere)
-        .then(function(matiere) {
-            matiere.$save();
-        }, function() {
-            $scope.status = 'You cancelled the dialog.';
-        });
-    };
-    self.add = function(ev){
-        var Matiere = sailsResource('matiere');
-        var matiere =new Matiere();
-        showDialog('add',ev,matiere)
-        .then(function(matiere) {
-            matiere.$save();
-            loadMaterials();
-        }, function() {
-            $scope.status = 'You cancelled the dialog.';
-        });
-    };
-    
-    loadMaterials();
-}])
-
-.controller('MatiereEditController',['$scope', '$mdDialog','mode','matiere',function($scope, $mdDialog,mode,matiere){
-    $scope.mode = mode;
-    $scope.matiere = angular.copy( matiere);
-    $scope.hide = function() {
-      $mdDialog.hide();
-    };
-
-    $scope.cancel = function() {
-      $mdDialog.cancel();
-    };
-
-    $scope.ok = function() {
-      $mdDialog.hide($scope.matiere);
-    };
-}])
-
-.controller('MatiereNuanceController',['$log','$scope','sailsResource','$mdDialog',function($log,$scope,sailsResource,$mdDialog){
-    var self=$scope;
-     
-     self.customFullscreen = false;
-
-     function loadNuances(){
-         self.nuances = sailsResource('chiffragenuancematiere').query();
-     }
-     function showDialog(mode,ev,nuance){
-         
-         return $mdDialog.show({
-            controller: 'MatiereNuanceEditController',
-            templateUrl: 'templates/matiere_nuance_edit.html',
-            parent: angular.element(document.body),
-            targetEvent: ev,
-            clickOutsideToClose:true,
-            fullscreen: $scope.customFullscreen,   // Only for -xs, -sm breakpoints.
-            //preserveScope: true,
-            locals:{
-                mode:mode,
-                nuance:nuance
-            }
-        });
-     }
-     
-     self.edit = function(ev,nuance){
-         $log.log('want edit nuance:'+nuance.id);
-
-        showDialog('edit',ev,nuance)
-        .then(function(nuance) {
-            nuance.$save();
-        }, function() {
-            $scope.status = 'You cancelled the dialog.';
-        });
-    };
-    self.add = function(ev){
-        var Nuance = sailsResource('chiffragenuancematiere');
-        var nuance =new Nuance();
-        showDialog('add',ev,nuance)
-        .then(function(nuance) {
-            nuance.$save();
-            loadNuances();
-        }, function() {
-            $scope.status = 'You cancelled the dialog.';
-        });
-    };
-    self.delete = function(nuance){
-        sailsResource('chiffragenuancematiere').get({id:nuance.id}).$delete(function(){loadNuances();});
-    }
-   
-    loadNuances();
+    $scope.menuItems =[
+        {
+            icon:'dashboard',
+            name:'Dasboard',
+            sref:'home.dashboard'
+        },
+        {
+            icon:'business_center',
+            name:'Client',
+            sref:'home.client.list'
+        },
+        {
+            icon:'person',
+            name:'Contact',
+            sref:'home.contact.list'
+        },
+        {
+            icon:'bubble_chart',
+            name:'Article',
+            sref:'home.article'
+        }
+        ,
+        {
+            icon:'build',
+            name:'Settings',
+            sref:'home.settings'
+        }
+    ]
     
 }])
 
-.controller('MatiereNuanceEditController',['$scope', '$mdDialog','sailsResource','mode','nuance',function($scope, $mdDialog,sailsResource,mode,nuance){
-    $scope.mode = mode;
-    $scope.nuance = angular.copy( nuance);
-    $scope.matieres={};
-    
-     $scope.loadMatieres = function(){
-        $scope.matieres =  sailsResource('matiere').query();
-    }
-    
-    $scope.hide = function() {
-      $mdDialog.hide();
-    };
 
-    $scope.cancel = function() {
-      $mdDialog.cancel();
-    };
-
-    $scope.ok = function() {
-      $mdDialog.hide($scope.nuance);
-    };
-    $scope.loadMatieres();
-}])
 
 .provider('Settings',[function(){
    var self=this;
@@ -189,6 +77,78 @@ angular.module('ngErp',['ngMaterial', 'ngMessages','compareTo','ngAnimate','toas
           title: 'Dashboard'
         }
       })
+      .state('home.chiffrage',{
+          url:'/chiffrage',
+          
+          template:'<ui-view></ui-view>',
+          //abstract:true,
+      })
+      .state('home.chiffrage.add',{
+          url:'/add',
+          controller:'ChiffrageController',
+          templateUrl:'templates/chiffrage/chiffrage.add.html'
+      })
+      
+      .state('home.client',{
+          url:'/client',
+          template:'<ui-view></ui-view>',
+          abstract:true,
+      })
+      .state('home.client.list',{
+          url:'',
+          templateUrl:'templates/client/client.list.html'
+      })
+      .state('home.client.add',{
+          url:'/add',
+          //controller:'ClientAddController',
+          /*data:{
+              mode:'add'
+          },*/
+          templateUrl:'templates/client/client.form.html'
+      })
+       .state('home.client.edit',{
+          url:'/edit/:id',
+          //controller:'ClientAddController',
+          /*data:{
+              mode:'edit'
+          },*/
+          templateUrl:'templates/client/client.form.html'
+      })
+      
+      
+      .state('home.contact',{
+        url:'/contact',
+        template:'<ui-view></ui-view>',
+        abstract:true
+      })
+      
+      .state('home.contact.list',{
+          url:'',
+          templateUrl:'templates/contact/contact.list.html'   
+      })
+      
+      .state('home.contact.add',{
+          url:'/add?clientid',
+          templateUrl:'templates/contact/contact.form.html',
+          /*data:{
+              mode:'add'
+          }*/
+      })
+      
+      .state('home.contact.edit',{
+          url:'/edit/:id',
+          templateUrl:'templates/contact/contact.form.html',
+          /*data:{
+              mode:'edit'
+          }*/
+      })
+      
+      .state('home.article',{
+          url:'/article',
+          //controller:'ArticleController',
+          template:'<div>Liste des articles</div>'
+      })
+      
       .state('home.settings',{
           url:'/settings',
           templateUrl:'templates/settings.html'
