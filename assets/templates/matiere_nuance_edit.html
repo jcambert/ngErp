@@ -23,7 +23,7 @@
         <md-input-container class="md-block">
             <label>Matiere</label>
             <md-icon >blur_on</md-icon>
-            <md-select placeholder="Assign Material" ng-model="nuance.matiere"  style="min-width: 200px;" name="matiere">
+            <md-select placeholder="Assign Material" ng-model="nuance.matiere"  style="min-width: 200px;" name="matiere" required>
                 <md-option ng-value="matiere.id" ng-repeat="matiere in matieres" ng-selected="{{ matiere.id === nuance.matiere.id  }}">{{matiere.nom}}</md-option>
             </md-select>
             <div ng-messages="frmnuance.matiere.$error"  ng-show="frmnuance.matiere.$dirty" ng-messages-multiple>

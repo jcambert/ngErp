@@ -6,6 +6,10 @@
  */
 
 module.exports = {
-	
+	byname:function(req,res){
+        sails.log.debug('get clients by name')
+        //return erp.client.byname();
+        return erp.client.byname(req,res);
+    }
 };
 

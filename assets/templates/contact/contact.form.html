@@ -1,30 +1,44 @@
 <div layout-gt-md="row">
   <!--<panel-widget flex title="Memory load" template="templates/partials/memory.html" class="fixed-height-widget" options='true'></panel-widget>-->
   <panel-widget flex title="Gestion des contacts"  class="fixed-height-widget" options='true'>
-    <md-content layout-padding ng-controller="ContactController">
-        {{editMode()?'Mode Edition':'Mode Ajout'}}
+    <!--<md-content layout-padding ng-controller="ContactController">-->
+    <md-content layout-padding ng-controller="ContactController as vm"  ng-init="vm.resource='contact';vm.loadOrEdit();">
+        {{vm.editMode()?'Mode Edition':'Mode Ajout'}}
+        {{vm.resource}}
             <form name="frm">
-                <!--<md-toolbar class="md-table-toolbar md-default">
-                    <div class="md-toolbar-tools">
-                        <md-button class="md-fab md-primary md-mini" aria-label="Return" ng-click="return()">
-                            <md-icon>chevron_left</md-icon> 
-                            <md-tooltip md-direction="bottom">Return<md-tooltip>
-                        </md-button>
-                    </div>
-                </md-toolbar>-->
+                <div layout="row" >
+                    <md-input-container flex="30" ng-if="vm.addMode()">
+                        <label>Client</label>
+                        
+                        <md-select name="client" ng-model="vm.item.client.id" required >
+                            <md-option ng-repeat="client in vm.clients" ng-value="client.id" >
+                                {{client.nom}}
+                            </md-option>
+                        </md-select>
+                        <div ng-messages="frm.client.$error">
+                            <div ng-message="required">This is required.</div>
+                        </div>
+                    </md-input-container>
+                    <md-input-container flex="30" ng-if="vm.editMode()">
+                        <label>Client</label>
+                        <input name="nom" ng-model="vm.item.client.nom" ng-disabled="true">
+                        
+                    </md-input-container>
+                   
+                </div>
                 
                 <div layout-gt-sm="row">
                     <md-input-container class="md-block" flex-gt-sm>
                         <label>Civility</label>
-                        <md-select ng-model="contact.civilite">
-                        <md-option ng-repeat="civilite in civilites" ng-value="civilite" ng-selected="{{ civilite === contact.civilite }}">
-                            {{civilite}}
-                        </md-option>
+                        <md-select ng-model="vm.item.civilite">
+                            <md-option ng-repeat="civilite in vm.civilites" ng-value="civilite" ng-selected="{{ civilite === vm.item.civilite }}">
+                                {{civilite}}
+                            </md-option>
                         </md-select>
                     </md-input-container>
                     <md-input-container class="md-block" flex-gt-sm>
-                        <label>Name</label>
-                        <input minlength="3" maxlength="100" required md-no-asterisk name="nom" ng-model="contact.nom">
+                        <label>Firstname</label>
+                        <input minlength="3" maxlength="100" required md-no-asterisk name="nom" ng-model="vm.item.nom">
                         <div ng-messages="frm.nom.$error">
                         <div ng-message="required">This is required.</div>
                         <div ng-message="minlength">Must have 3 characters at least.</div>
@@ -32,8 +46,8 @@
                         </div>
                     </md-input-container>
                     <md-input-container class="md-block" flex-gt-sm>
-                        <label>Name</label>
-                        <input minlength="3" maxlength="100" required md-no-asterisk name="prenom" ng-model="contact.prenom">
+                        <label>Lastname</label>
+                        <input minlength="3" maxlength="100" required md-no-asterisk name="prenom" ng-model="vm.item.prenom">
                         <div ng-messages="frm.prenom.$error">
                         <div ng-message="required">This is required.</div>
                         <div ng-message="minlength">Must have 3 characters at least.</div>
@@ -46,32 +60,15 @@
                 <div layout="row">
                     <md-input-container flex="30">
                     <label>Telephone</label>
-                    <input required name="telephone" ng-model="client.telephone">
+                    <input required name="telephone" ng-model="vm.item.telephone">
                     <div ng-messages="frm.telephone.$error">
                         <div ng-message="required">This is required.</div>
                     </div>
                     </md-input-container>
-
-                   
                 </div>
-                <md-divider ng-if="editMode()"></md-divider>
-                <md-input-container class="md-block" ng-if="editMode()" ng-include="'templates/partials/contact/contact.list.partial.html'">
-                
-                </md-input-container>
+               
+                <save-cancel-toolbar></save-cancel-toolbar>
 
-
-                <md-toolbar class="md-table-toolbar md-default">
-                    <div class="md-toolbar-tools">
-                        <md-button class="md-fab md-primary md-mini" aria-label="Save Client" ng-click="save($event)">
-                            <md-icon>save</md-icon> 
-                            <md-tooltip md-direction="bottom">Save client<md-tooltip>
-                        </md-button>
-                        <md-button class="md-fab md-mini" aria-label="Add Dp" ng-click="cancel()">
-                            <md-icon>cancel</md-icon> 
-                            <md-tooltip md-direction="bottom">Cancel saving client<md-tooltip>
-                        </md-button>
-                    </div>
-                </md-toolbar>
             </form>
         </md-content>
    </panel-widget>

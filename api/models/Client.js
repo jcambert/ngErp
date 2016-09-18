@@ -17,11 +17,11 @@ module.exports = {
             type: 'string'
         },
         contacts:{
-            collections:'Contact',
+            collection:'Contact',
             via:'client'
         },
         dps:{
-            collections:'dp',
+            collection:'dp',
             via:'client'
         }
   }

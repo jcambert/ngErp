@@ -10,6 +10,7 @@ erp.load = function load() {
     erp.user = require('./user/index.js');
     erp.useractivity = require('./useractivity/index.js');
     erp.response = require('./response/index.js');
+    erp.client = require('./client/index.js');
     
     // get Erp version number
     try {
