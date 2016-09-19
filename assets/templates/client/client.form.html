@@ -67,8 +67,8 @@
                                 <td md-cell>{{contact.email || '-'}}</td>
                                 <td md-cell>{{contact.telephone || '-'}}</td>
                                 <td md-cell>
-                                    <md-button class="md-icon-button"><md-icon>edit</md-icon><md-tooltip>Edit {{contact.nom}} {{contact.prenom}}</md-tooltip></md-button>
-                                    <md-button class="md-icon-button"><md-icon>delete</md-icon><md-tooltip>Delete {{contact.nom}} {{contact.prenom}}</md-tooltip></md-button>
+                                    <md-button class="md-icon-button"  ui-sref="home.contact.edit({id:contact.id})"><md-icon>edit</md-icon><md-tooltip>Edit {{contact.nom}} {{contact.prenom}}</md-tooltip></md-button>
+                                    <md-button class="md-icon-button" ng-click="delete($event,contact)"><md-icon>delete</md-icon><md-tooltip>Delete {{contact.nom}} {{contact.prenom}}</md-tooltip></md-button>
                                 </td>
                             </tr>
                             </tbody>

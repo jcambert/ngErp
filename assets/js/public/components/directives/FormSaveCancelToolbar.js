@@ -1,6 +1,6 @@
 'use strict;'
 angular.module('ngErp')
-.directive('saveCancelToolbar',function(){
+.directive('saveCancelToolbar',['$window',function($window){
     return{
         restrict:'E',
         replace:true,
@@ -11,11 +11,11 @@ angular.module('ngErp')
                             '<md-icon>save</md-icon>'+ 
                             '<md-tooltip md-direction="bottom">Save {{vm.resource}}<md-tooltip>'+
                         '</md-button>'+
-                        '<md-button class="md-fab md-mini" aria-label="Add {{vm.resource}}" ng-click="vm.cancel()">'+
+                        '<md-button class="md-fab md-mini" aria-label="Add {{vm.resource}}" ng-click="history.back()">'+
                             '<md-icon>cancel</md-icon>'+ 
                             '<md-tooltip md-direction="bottom">Cancel saving {{vm.resource}}<md-tooltip>'+
                         '</md-button>'+
                     '</div>'+
                 '</md-toolbar>'
     }
-})
+}]);
