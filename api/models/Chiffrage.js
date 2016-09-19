@@ -8,6 +8,17 @@
 module.exports = {
 
   attributes: {
+      article:{
+        model:'article'  
+      },
+      indice:{
+          type:'integer',
+          required:true,
+          defaultTo:0,
+      },
+      designationIndice:{
+          type:'string',
+      },
       matieres:{
           collections:'chiffragematiere',
           via:'chiffrage'
