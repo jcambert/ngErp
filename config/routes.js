@@ -39,6 +39,8 @@ module.exports.routes = {
  'GET /signin':{view: 'signin',locals:{application:'ngErpSignin',controller:'SigninController'}},
  'GET /': 'PageController.showHomePage',
  
+ 'GET /dp/lastnumber':'DpController.lastnumber',
+ 
  'GET /client/byname':'ClientController.byname',
  
  'POST /signup': 'UserController.signup',

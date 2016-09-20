@@ -25,9 +25,9 @@ module.exports = {
           through:'dparticle'
           
       },
-      chiffrage:{
-          model:'chiffrage',
-          unique:true
+      chiffrages:{
+          collection:'chiffrage',
+          via:'article'
       }
   }
 };

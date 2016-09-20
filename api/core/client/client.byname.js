@@ -7,9 +7,10 @@ module.exports = function byname(req,res){
              if (err) {
                     return res.negotiate(err);
                 }
+                
              return res.json(clients);
              //reject(new Error('email not exist'));
-         })
+         });
         
      });
 }

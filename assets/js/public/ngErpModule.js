@@ -11,6 +11,11 @@ angular.module('ngErp',['ngMaterial', 'ngMessages','compareTo','ngAnimate','toas
             sref:'home.dashboard'
         },
         {
+            icon:'shopping_cart',
+            name:'Offre de Prix',
+            sref:'home.dp.list'
+        },
+        {
             icon:'business_center',
             name:'Client',
             sref:'home.client.list'
@@ -76,6 +81,23 @@ angular.module('ngErp',['ngMaterial', 'ngMessages','compareTo','ngAnimate','toas
         data: {
           title: 'Dashboard'
         }
+      })
+      .state('home.dp',{
+          url:'/dp',
+          template:'<ui-view></ui-view>',
+          abstract:true
+      })
+      .state('home.dp.list',{
+          url:'',
+          templateUrl:'templates/dp/dp.list.html'
+      })
+      .state('home.dp.add',{
+          url:'/add',
+          templateUrl:'templates/dp/dp.form.html'
+      })
+      .state('home.dp.edit',{
+          url:'/edit/:id',
+          templateUrl:'templates/dp/dp.form.html'
       })
       .state('home.chiffrage',{
           url:'/chiffrage',
