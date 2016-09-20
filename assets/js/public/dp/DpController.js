@@ -10,14 +10,14 @@ var DpController=function ($log,$scope,$state,$stateParams,toastr,sailsResource,
     });
      
      
-     self.createNewItem = function(){
+     /*self.createNewItem = function(){
         serviceClient.lastNumber(function(dp){
             console.dir(dp);
             self.item =dp;
             self.onCreateNewItemSuccess();
         });
         
-    };
+    };*/
 }
 
 

@@ -13,7 +13,7 @@ module.exports = {
             function(err,item){
                 if(err) return res.negotiate(err);
                 sails.log.debug('try fin Dp last number:'+item);
-                if(item == undefined)
+                if(item.length == 0)
                     item={numero:0};
                 if(upsert){
                     Dp.create({numero:item.numero+1})
