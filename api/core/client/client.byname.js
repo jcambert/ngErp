@@ -1,7 +1,7 @@
 var Promise = require('bluebird');
 module.exports = function byname(req,res){
     return new Promise(function(resolve, reject){
-         Client.find({},{select:['id','nom']})
+         Client.find({},{select:['id','nom'],sort:'nom'})
          .exec(function(err,clients){
             
              if (err) {

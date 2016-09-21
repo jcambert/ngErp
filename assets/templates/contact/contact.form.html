@@ -1,8 +1,6 @@
 <div layout-gt-md="row">
-  <!--<panel-widget flex title="Memory load" template="templates/partials/memory.html" class="fixed-height-widget" options='true'></panel-widget>-->
   <panel-widget flex title="Gestion des contacts"  class="fixed-height-widget" options='true'>
-    <!--<md-content layout-padding ng-controller="ContactController">-->
-    <md-content layout-padding ng-controller="ContactController as vm"  ng-init="vm.resource='contact';vm.loadOrEdit();">
+     <md-content layout-padding ng-controller="ContactController as vm"  ng-init="vm.resource='contact';vm.loadOrEdit();">
         {{vm.editMode()?'Mode Edition':'Mode Ajout'}}
         {{vm.resource}}
             <form name="frm">

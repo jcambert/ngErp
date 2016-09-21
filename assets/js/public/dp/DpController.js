@@ -4,20 +4,14 @@ var DpController=function ($log,$scope,$state,$stateParams,toastr,sailsResource,
     var self=this;
     DpController.prototype.$super.apply(self,arguments);
     
-    
-    var serviceClient=sailsResource(self.resource,{
-            lastNumber:{method:'GET', url: '/dp/lastNumber?save'}
-    });
-     
-     
-     self.createNewItem = function(){
-        serviceClient.lastNumber(function(dp){
-            console.dir(dp);
-            self.item =dp;
-            self.onCreateNewItemSuccess();
-        });
-        
+    this.tinymceModel = 'Initial content';
+
+   
+    this.tinymceOptions = {
+        plugins: 'link image code',
+        toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code'
     };
+   
 }
 
 

@@ -1,5 +1,5 @@
 'use strict';
-angular.module('ngErp',['ngMaterial', 'ngMessages','compareTo','ngAnimate','toastr','sailsResource','ngErpModels','ui.router','md.data.table'])
+angular.module('ngErp',['ngMaterial', 'ngMessages','compareTo','ngAnimate','toastr','sailsResource','ngErpModels','ui.router','md.data.table','ui.tinymce'])
 .controller('MainController',['$scope','Settings',function($scope,Settings){
     
     $scope.settings={};

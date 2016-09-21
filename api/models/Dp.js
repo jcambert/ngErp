@@ -11,21 +11,21 @@ module.exports = {
       numero:{
           type: 'integer',
           autoIncrement:true,
-          required:true,
+          //required:true,
           unique:true
       },
       client:{
           model:'client',
-          required:true
+          //required:true
       },
       deviseur:{
           model: 'user',
-          required:true
+          //required:true
       },
       version:{
           type: 'integer',
           required:true,
-          defaultTo:0
+          defaultsTo:0
       },
       referenceclient:{
           type: 'string',

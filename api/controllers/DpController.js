@@ -6,25 +6,6 @@
  */
 
 module.exports = {
-	lastnumber : function(req,res){
-        var upsert=('save' in req.params);
-        Dp.find({sort:'numero DESC'}).limit(1)
-        .exec(
-            function(err,item){
-                if(err) return res.negotiate(err);
-                sails.log.debug('try fin Dp last number:'+item);
-                if(item == undefined)
-                    item={numero:0};
-                if(upsert){
-                    Dp.create({numero:item.numero+1})
-                    .exec(function(err,newItem){
-                        if(err) return res.negotiate(err);
-                         return res.json(newItem);
-                    })
-                }
-                else
-                    return res.json(item);
-        });
-    }
+	
 };
 
