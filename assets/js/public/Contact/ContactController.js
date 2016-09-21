@@ -19,7 +19,31 @@ var ContactController=function ($log,$scope,$state,$stateParams,toastr,sailsReso
         else{
             
         }
+        
+        
     }
+    
+     self.onLoadItemSuccess = function(item){
+        service.byname({'name':self.resource},
+            function(frm){
+                console.dir(frm);
+                self.frm=frm.ui;
+            },
+            function(err){
+                console.dir(err);
+            }
+        );
+    }
+    
+    var root = angular.element('form');
+    var service = sailsResource('form',{
+        byname:{method:'GET',url:'/form/byname/:name',isArray:false} 
+    });
+    
+    this.tinymceOptions= {
+        plugins: 'link image code',
+        toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code'
+    };
     
     var frm={
         name:'frm',
@@ -27,7 +51,7 @@ var ContactController=function ($log,$scope,$state,$stateParams,toastr,sailsReso
             {
                 label:'Client',
                 flex:30,
-                if:'vm.addMode()'
+                if:'vm.addMode()',
                 option:{
                     name:'client',
                     model:'vm.item.client.id',

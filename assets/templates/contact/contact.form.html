@@ -4,6 +4,7 @@
         {{vm.editMode()?'Mode Edition':'Mode Ajout'}}
         {{vm.resource}}
             <form name="frm">
+                 <textarea ui-tinymce="vm.tinymceOptions" ng-model="vm.frm"></textarea>
                 <div layout="row" >
                     <md-input-container flex="30" ng-if="vm.addMode()">
                         <label>Client</label>
