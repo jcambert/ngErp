@@ -1,5 +1,5 @@
 'use strict';
-angular.module('ngErp',['ngMaterial', 'ngMessages','compareTo','ngAnimate','toastr','sailsResource','ngErpModels','ui.router','md.data.table','ui.tinymce'])
+angular.module('ngErp',['ngDynamic', 'ngMaterial', 'ngMessages','compareTo','ngAnimate','toastr','sailsResource','ngErpModels','ui.router','md.data.table','ui.tinymce'])
 .controller('MainController',['$scope','Settings',function($scope,Settings){
     
     $scope.settings={};
@@ -159,7 +159,8 @@ angular.module('ngErp',['ngMaterial', 'ngMessages','compareTo','ngAnimate','toas
       
       .state('home.contact.edit',{
           url:'/edit/:id',
-          templateUrl:'templates/contact/contact.form.html',
+          //templateUrl:'templates/contact/contact.form.html',
+          templateUrl:'templates/contact/dyn.contact.form.html',
           /*data:{
               mode:'edit'
           }*/

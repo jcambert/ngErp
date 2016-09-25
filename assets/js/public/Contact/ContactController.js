@@ -45,14 +45,15 @@ var ContactController=function ($log,$scope,$state,$stateParams,toastr,sailsReso
         toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code'
     };
     
-    var frm={
-        name:'frm',
+    self.jsonTemplate={
+        name:'formly',
         row:[
             {
-                label:'Client',
+                
                 flex:30,
                 if:'vm.addMode()',
                 option:{
+                    label:'Client',
                     name:'client',
                     model:'vm.item.client.id',
                     required:true,
@@ -64,10 +65,11 @@ var ContactController=function ($log,$scope,$state,$stateParams,toastr,sailsReso
                     {error:'required',message:'This is required'},
                 ]
             },{
-                label:'Client',
+               
                 flex:30,
                 if:'vm.editMode()',
                 input:{
+                    label:'Client',
                     name:'nom',
                     model:'vm.item.client.nom',
                     disabled:true
