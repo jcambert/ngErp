@@ -14,7 +14,7 @@ angular.module('ngDynamic',[])
     var templates={
             name:'attribute',
             row:'ng-row',
-            input:'dyn.input.html',
+            input:'ng-input',
     };
     var directory='templates/component/dynform/';
     var isHtmlTemplate = function(template){
@@ -57,6 +57,9 @@ angular.module('ngDynamic',[])
     var self=this;
     var templateLoaded=false;
     var templates=dynFormConfig.templates();
+    var json={};
+    var flatjson={};
+    var counter=0;
     console.dir(templates);
     this.loadTemplates=function(){
         if(templateLoaded)return;
@@ -67,15 +70,50 @@ angular.module('ngDynamic',[])
         templateLoaded=true;
     };
     
-    this.build = function(elt,template){
-        //console.dir(template);
-        console.dir(templates.length);
-        angular.forEach(template,this.buildField,elt);
+    this.findById = function(id){
+        return _.find(json,function(o){return o.id==id;});
     }
-    this.buildElement = function(elt){
-        return angular.element('<'+elt+'></'+elt+'>');
+    
+    this.generateId = function(){
+        var result= "db-"+(counter++);
+        console.dir('generate id:'+result);
+        return result;
+    }
+    
+    
+    this.setJson = function(tpl){
+        json=tpl;
+    }
+    
+    this.build = function(elt,id){
+        if(id){
+            
+        }else{
+            if(angular.isObject(json) && (!('id' in json)))
+                json.id=self.generateId();
+                console.dir(json);
+            angular.forEach(json,this.buildField,elt);
+        }
+    }
+    
+    
+
+    this.buildElement = function(elt,id){
+        var res= angular.element('<'+elt+'></'+elt+'>');
+        console.dir(id);
+        if(id)
+            res.attr('id',id);
+        return res;
     }
     this.buildField = function(value,key){
+        console.dir('value:'+value);
+        console.dir('key:'+key);
+     
+        //if(!('id' in flatjson[key]))
+        if(angular.isObject(json))
+            json[key].id=self.generateId();
+        
+        console.dir(json);
         
         if(!angular.isDefined(templates[key]))return;
         $log.log('Build field:'+key);
@@ -88,12 +126,12 @@ angular.module('ngDynamic',[])
             this.append($templateCache.get(templates[key]));
         }
         else {
-            $log.log('Build element:'+key);
-            var elt=angular.element(self.buildElement(templates[key]));
-            if(angular.isArray(value)){
+            $log.log('Build element:'+key+ ' with key:'+json[key].id);
+            var elt=angular.element(self.buildElement(templates[key],json[key].id));
+            /*if(angular.isArray(value)){
                 setAttribute(elt,'json-template',angular.toJson(value));
                 console.dir(value);
-            }
+            }*/
             this.append(elt);
         }
     }
@@ -108,7 +146,9 @@ angular.module('ngDynamic',[])
         restrict:'E',
         link:function($scope,element,attrs){
             $log.log('formRender link');
-            var root = angular.element('<ng-form></ng-form>');
+            if(!angular.isDefined(attrs.id))
+                attrs.id=dynBuilder.generateId();
+            var root =  dynBuilder.buildElement('ng-form',attrs.id);
             
 
             
@@ -156,7 +196,7 @@ angular.module('ngDynamic',[])
                 (attrs.jsonTemplate?
                     $q.when($parse(attrs.jsonTemplate)($scope)):
                     $http.get(attrs.jsonTemplateUrl,{cache:$templateCache}).then(function(result){return result.data;}))
-                .then(function(template){
+                .then(function(json){
                     $log.log("Have a template");
                     
                     //in provider now
@@ -169,7 +209,8 @@ angular.module('ngDynamic',[])
                     //root.attr('name',template.name || 'thisform');
                     
                     //angular.forEach(template,buildField,root);
-                    dynBuilder.build(root,template);
+                    dynBuilder.setJson(json);
+                    dynBuilder.build(root);
                     $compile(root)($scope);
                     element.replaceWith(root);
                 })
@@ -193,8 +234,23 @@ angular.module('ngDynamic',[])
         replace:true,
         templateUrl:'templates/component/dynform/dyn.row.html',
         link:function(scope,element,attrs){
-            if(angular.isDefined(attrs.jsonTemplate)){
-                dynBuilder.build(element,attrs.jsonTemplate)
+            if(angular.isDefined(attrs.id)){
+                dynBuilder.build(element,attrs.id);
+            }
+        }
+    }
+}])
+
+.directive('ngInput',['dynBuilder',function(dynBuilder){
+    return{
+        restrict:'E',
+        replace:true,
+        templateUrl:'templates/component/dynform/dyn.input.html',
+        link:function(scope,element,attrs){
+            console.dir(attrs.id);
+            scope.dyn=dynBuilder.findById(attrs.id);
+            if(angular.isDefined(attrs.id)){
+                dynBuilder.build(element,attrs.id);
             }
         }
     }

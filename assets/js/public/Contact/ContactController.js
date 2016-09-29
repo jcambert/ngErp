@@ -9,7 +9,7 @@ var ContactController=function ($log,$scope,$state,$stateParams,toastr,sailsReso
             byname:{method:'GET', url: '/client/byname', isArray: true}
     });
      serviceClient.byname(function(clients){
-         console.dir(clients);
+         //console.dir(clients);
          self.clients =clients
      });
             
@@ -26,7 +26,7 @@ var ContactController=function ($log,$scope,$state,$stateParams,toastr,sailsReso
      self.onLoadItemSuccess = function(item){
         service.byname({'name':self.resource},
             function(frm){
-                console.dir(frm);
+                //console.dir(frm);
                 self.frm=frm.ui;
             },
             function(err){
@@ -47,7 +47,13 @@ var ContactController=function ($log,$scope,$state,$stateParams,toastr,sailsReso
     
     self.jsonTemplate={
         name:'formly',
-        row:[
+        input:{
+                label:'Client',
+                name:'nom',
+                model:'vm.item.client.nom',
+                disabled:true
+            },
+       /* row:[
             {
                 
                 flex:30,
@@ -75,7 +81,7 @@ var ContactController=function ($log,$scope,$state,$stateParams,toastr,sailsReso
                     disabled:true
                 }
             }
-        ]
+        ]*/
             
         
     }
