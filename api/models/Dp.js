@@ -31,7 +31,7 @@ module.exports = {
           type: 'string',
       },
       datearendreprevue:{
-          type: 'string'
+          type: 'date'
       },
       commercial:{
           type:'string'

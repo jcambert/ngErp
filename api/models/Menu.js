@@ -16,7 +16,20 @@ module.exports = {
     items:{
         collection:'MenuItem',
         via:'menu'
+    },
+    icon:{
+        type:'string'
+    },
+    state:{
+        type:'string'
+    },
+    left:{
+        type:'boolean'
+    },
+    center:{
+        type:'boolean'
     }
+    
   }
 };
 
