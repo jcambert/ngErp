@@ -1,0 +1,1443 @@
+{
+  "data": {
+    "article_dps__dp_articles": [],
+    "article": [],
+    "chiffrage": [],
+    "chiffragecalculmatiere": [],
+    "chiffragecomposant": [],
+    "chiffrageformattole": [],
+    "chiffragematiere": [],
+    "chiffragenuancematiere": [
+      {
+        "nom": "Xc10<3",
+        "matiere": 6,
+        "prix": 0.67,
+        "createdAt": "2016-09-14T15:31:31.567Z",
+        "updatedAt": "2016-10-07T15:00:40.230Z",
+        "id": 3
+      },
+      {
+        "nom": "Xc10>10",
+        "prix": 0.5,
+        "createdAt": "2016-10-07T14:05:19.407Z",
+        "updatedAt": "2016-10-07T14:47:03.453Z",
+        "id": 4,
+        "matiere": 6
+      },
+      {
+        "nom": "304L",
+        "prix": 3.5,
+        "createdAt": "2016-10-07T14:07:57.440Z",
+        "updatedAt": "2016-10-07T14:27:25.095Z",
+        "id": 5,
+        "matiere": 2
+      },
+      {
+        "nom": "S235JR",
+        "prix": 0.53,
+        "createdAt": "2016-10-07T14:22:50.241Z",
+        "updatedAt": "2016-10-07T14:53:02.225Z",
+        "id": 6,
+        "matiere": 6
+      },
+      {
+        "nom": "Ag3",
+        "prix": 0.5,
+        "matiere": 3,
+        "createdAt": "2016-10-07T15:02:57.777Z",
+        "updatedAt": "2016-10-07T15:02:57.777Z",
+        "id": 7
+      },
+      {
+        "nom": "Au4g",
+        "prix": 0.6,
+        "matiere": 3,
+        "createdAt": "2016-10-07T15:04:09.108Z",
+        "updatedAt": "2016-10-07T15:04:09.108Z",
+        "id": 8
+      }
+    ],
+    "chiffrageoperation": [],
+    "chiffragetarif": [],
+    "chiffragets": [],
+    "chiffrageusinage": [],
+    "client": [
+      {
+        "nom": "Schlumberger",
+        "telephone": "012345688",
+        "createdAt": "2016-09-15T13:43:39.695Z",
+        "updatedAt": "2016-09-15T14:17:40.477Z",
+        "id": 1
+      },
+      {
+        "nom": "toto",
+        "telephone": "1235",
+        "createdAt": "2016-09-15T14:05:56.484Z",
+        "updatedAt": "2016-09-15T14:05:56.484Z",
+        "id": 3
+      }
+    ],
+    "contact": [
+      {
+        "client": 3,
+        "civilite": "Mr",
+        "nom": "ambert",
+        "createdAt": "2016-09-15T16:16:18.489Z",
+        "updatedAt": "2016-09-15T16:16:18.489Z",
+        "id": 1
+      },
+      {
+        "client": 3,
+        "civilite": "Mr",
+        "nom": "ttoitit",
+        "createdAt": "2016-09-15T16:17:29.291Z",
+        "updatedAt": "2016-09-15T16:17:29.291Z",
+        "id": 2
+      },
+      {
+        "client": 1,
+        "civilite": "Mme",
+        "nom": "qsdfghj",
+        "createdAt": "2016-09-16T06:57:03.883Z",
+        "updatedAt": "2016-09-16T06:57:03.883Z",
+        "id": 3
+      }
+    ],
+    "dp": [
+      {
+        "version": 0,
+        "createdAt": "2016-09-21T09:30:40.746Z",
+        "updatedAt": "2016-09-21T09:30:40.746Z",
+        "numero": 2,
+        "id": 2
+      },
+      {
+        "numero": 12345,
+        "version": 0,
+        "createdAt": "2016-10-05T15:20:06.737Z",
+        "updatedAt": "2016-10-07T08:44:16.900Z",
+        "id": 3,
+        "referenceclient": "4568",
+        "datearendreprevue": "30/10/2016"
+      },
+      {
+        "numero": 456,
+        "version": 0,
+        "createdAt": "2016-10-06T06:43:04.514Z",
+        "updatedAt": "2016-10-06T15:56:57.523Z",
+        "id": 4,
+        "referenceclient": "987650"
+      },
+      {
+        "numero": 8,
+        "datearendreprevue": "2016-10-26T00:00:00.000Z",
+        "version": 0,
+        "createdAt": "2016-10-06T15:59:51.733Z",
+        "updatedAt": "2016-10-06T15:59:51.733Z",
+        "id": 5
+      }
+    ],
+    "dparticle": [],
+    "form": [],
+    "matiere": [
+      {
+        "nom": "Inox",
+        "densite": 8,
+        "createdAt": "2016-09-08T13:17:38.562Z",
+        "updatedAt": "2016-10-07T14:27:25.063Z",
+        "id": 2
+      },
+      {
+        "nom": "Aluminium",
+        "densite": 2.8,
+        "createdAt": "2016-09-08T13:17:53.352Z",
+        "updatedAt": "2016-10-07T14:45:56.245Z",
+        "id": 3
+      },
+      {
+        "nom": "Cuivre",
+        "densite": 9.92,
+        "createdAt": "2016-10-07T09:50:54.879Z",
+        "updatedAt": "2016-10-07T09:50:54.879Z",
+        "id": 4
+      },
+      {
+        "nom": "Acier",
+        "densite": 8,
+        "createdAt": "2016-10-07T14:46:38.875Z",
+        "updatedAt": "2016-10-07T15:00:40.168Z",
+        "id": 6
+      }
+    ],
+    "menu": [
+      {
+        "name": "Deviseur",
+        "createdAt": "2016-10-04T07:32:06.534Z",
+        "updatedAt": "2016-10-05T14:41:27.536Z",
+        "id": 1,
+        "icon": "ion-social-euro",
+        "state": "home.deviseur",
+        "left": true
+      },
+      {
+        "name": "Settings",
+        "createdAt": "2016-10-04T09:10:24.668Z",
+        "updatedAt": "2016-10-07T12:11:25.876Z",
+        "id": 3,
+        "state": "home.settings",
+        "left": true,
+        "icon": "ion-gear-b"
+      },
+      {
+        "name": "Commercial",
+        "createdAt": "2016-10-05T14:04:41.861Z",
+        "updatedAt": "2016-10-05T14:38:36.283Z",
+        "id": 4,
+        "left": true,
+        "icon": "ion-ios-briefcase",
+        "state": "home.commercial"
+      }
+    ],
+    "menuitem": [
+      {
+        "text": "Menus",
+        "state": "home.settings-menus",
+        "icon": "ion-navicon",
+        "menu": 3,
+        "createdAt": "2016-10-04T09:10:24.695Z",
+        "updatedAt": "2016-10-05T14:42:42.405Z",
+        "id": 2
+      },
+      {
+        "menu": null,
+        "text": "Commercial",
+        "icon": "ion-ios-browsers",
+        "state": "home.commercial",
+        "createdAt": "2016-10-04T15:23:11.868Z",
+        "updatedAt": "2016-10-04T15:48:05.685Z",
+        "id": 3
+      },
+      {
+        "menu": 1,
+        "text": "DP",
+        "icon": "ion-ios-bookmarks-outline",
+        "state": "home.dp",
+        "createdAt": "2016-10-04T15:38:25.705Z",
+        "updatedAt": "2016-10-05T14:41:27.543Z",
+        "id": 4
+      },
+      {
+        "menu": 4,
+        "text": "Offres dePrix",
+        "icon": "ion-ios-briefcase",
+        "state": "home.dp",
+        "createdAt": "2016-10-05T14:05:20.243Z",
+        "updatedAt": "2016-10-05T14:38:36.299Z",
+        "id": 5
+      },
+      {
+        "menu": 4,
+        "text": "Articles",
+        "icon": "ion-ios-paper-outline",
+        "state": "home.article",
+        "createdAt": "2016-10-05T14:46:32.788Z",
+        "updatedAt": "2016-10-05T14:46:32.788Z",
+        "id": 6
+      },
+      {
+        "menu": 3,
+        "text": "Nuance Matieres",
+        "icon": "ion-pizza",
+        "state": "home.chiffragenuancematiere",
+        "createdAt": "2016-10-07T08:58:39.873Z",
+        "updatedAt": "2016-10-07T15:08:13.526Z",
+        "id": 7,
+        "listoptions": {
+          "populate": "matiere",
+          "sort": {
+            "matiere.nom": 1,
+            "nom": 1
+          }
+        }
+      },
+      {
+        "menu": 3,
+        "text": "Matiere",
+        "icon": "ion-icecream",
+        "state": "home.matiere",
+        "createdAt": "2016-10-07T09:08:04.032Z",
+        "updatedAt": "2016-10-07T12:11:25.907Z",
+        "id": 8,
+        "listoptions": {
+          "sort": {
+            "nom": 1
+          }
+        }
+      },
+      {
+        "menu": 3,
+        "text": "Modele d'operations",
+        "icon": "ion-outlet",
+        "state": "home.chiffragemodeloperation",
+        "createdAt": "2016-10-07T15:13:46.262Z",
+        "updatedAt": "2016-10-07T15:14:03.688Z",
+        "id": 9
+      },
+      {
+        "menu": 4,
+        "text": "Clients",
+        "state": "home.client",
+        "createdAt": "2016-10-07T15:31:33.464Z",
+        "updatedAt": "2016-10-07T15:31:49.343Z",
+        "id": 10
+      },
+      {
+        "menu": 4,
+        "text": "Contacts",
+        "state": "home.contact",
+        "createdAt": "2016-10-07T15:31:45.117Z",
+        "updatedAt": "2016-10-07T15:31:45.117Z",
+        "id": 11
+      },
+      {
+        "menu": 1,
+        "text": "Matieres",
+        "state": "home.chiffragenuancematiere",
+        "createdAt": "2016-10-07T15:33:07.749Z",
+        "updatedAt": "2016-10-07T15:33:07.749Z",
+        "id": 12
+      },
+      {
+        "menu": 1,
+        "text": "Operations",
+        "state": "hoe.operation",
+        "createdAt": "2016-10-07T15:33:23.622Z",
+        "updatedAt": "2016-10-07T15:33:23.622Z",
+        "id": 13
+      },
+      {
+        "menu": 1,
+        "text": "Composants",
+        "state": "home.composant",
+        "createdAt": "2016-10-07T15:33:36.121Z",
+        "updatedAt": "2016-10-07T15:33:36.121Z",
+        "id": 14
+      }
+    ],
+    "user": [
+      {
+        "name": "ambert",
+        "email": "jc.ambert@free.fr",
+        "encryptedPassword": "$2a$10$KYmwcmfROxyNbU.koVOGJ.nAIN0mK2sDm.WIJhYP5YSukFc4MCdqe",
+        "gravatarUrl": "http://www.gravatar.com/avatar/37d680788ede39189de1345275265739?",
+        "enable": true,
+        "lastLoggedIn": "1970-01-01T00:00:00.000Z",
+        "createdAt": "2016-09-07T10:28:19.409Z",
+        "updatedAt": "2016-09-07T10:28:19.409Z",
+        "id": 1
+      }
+    ],
+    "useractivity": [
+      {
+        "activity": "logged in at 2016-09-07 12:28:29",
+        "user": 1,
+        "createdAt": "2016-09-07T10:28:29.072Z",
+        "updatedAt": "2016-09-07T10:28:29.072Z",
+        "id": 1
+      },
+      {
+        "activity": "logged in at 2016-09-07 12:30:58",
+        "user": 1,
+        "createdAt": "2016-09-07T10:30:58.470Z",
+        "updatedAt": "2016-09-07T10:30:58.470Z",
+        "id": 2
+      },
+      {
+        "activity": "logged in at 2016-09-07 12:31:50",
+        "user": 1,
+        "createdAt": "2016-09-07T10:31:50.028Z",
+        "updatedAt": "2016-09-07T10:31:50.028Z",
+        "id": 3
+      },
+      {
+        "activity": "logged in at 2016-09-07 12:37:00",
+        "user": 1,
+        "createdAt": "2016-09-07T10:37:00.841Z",
+        "updatedAt": "2016-09-07T10:37:00.841Z",
+        "id": 4
+      },
+      {
+        "activity": "logged in at 2016-09-07 12:38:25",
+        "user": 1,
+        "createdAt": "2016-09-07T10:38:25.497Z",
+        "updatedAt": "2016-09-07T10:38:25.497Z",
+        "id": 5
+      },
+      {
+        "activity": "logged in at 2016-09-07 12:38:52",
+        "user": 1,
+        "createdAt": "2016-09-07T10:38:52.173Z",
+        "updatedAt": "2016-09-07T10:38:52.173Z",
+        "id": 6
+      },
+      {
+        "activity": "logged in at 2016-09-07 12:39:16",
+        "user": 1,
+        "createdAt": "2016-09-07T10:39:16.946Z",
+        "updatedAt": "2016-09-07T10:39:16.946Z",
+        "id": 7
+      },
+      {
+        "activity": "logged in at 2016-09-07 12:43:41",
+        "user": 1,
+        "createdAt": "2016-09-07T10:43:41.260Z",
+        "updatedAt": "2016-09-07T10:43:41.260Z",
+        "id": 8
+      },
+      {
+        "activity": "logged in at 2016-09-07 12:44:33",
+        "user": 1,
+        "createdAt": "2016-09-07T10:44:33.001Z",
+        "updatedAt": "2016-09-07T10:44:33.001Z",
+        "id": 9
+      },
+      {
+        "activity": "logged in at 2016-09-07 13:34:00",
+        "user": 1,
+        "createdAt": "2016-09-07T11:34:00.843Z",
+        "updatedAt": "2016-09-07T11:34:00.843Z",
+        "id": 10
+      },
+      {
+        "activity": "logged in at 2016-09-07 13:35:00",
+        "user": 1,
+        "createdAt": "2016-09-07T11:35:00.721Z",
+        "updatedAt": "2016-09-07T11:35:00.721Z",
+        "id": 11
+      },
+      {
+        "activity": "logged in at 2016-09-07 13:36:55",
+        "user": 1,
+        "createdAt": "2016-09-07T11:36:55.335Z",
+        "updatedAt": "2016-09-07T11:36:55.335Z",
+        "id": 12
+      },
+      {
+        "activity": "logged in at 2016-09-07 13:47:40",
+        "user": 1,
+        "createdAt": "2016-09-07T11:47:40.514Z",
+        "updatedAt": "2016-09-07T11:47:40.514Z",
+        "id": 13
+      },
+      {
+        "activity": "logged in at 2016-09-07 13:51:33",
+        "user": 1,
+        "createdAt": "2016-09-07T11:51:33.635Z",
+        "updatedAt": "2016-09-07T11:51:33.635Z",
+        "id": 14
+      },
+      {
+        "activity": "logged in at 2016-09-07 13:53:38",
+        "user": 1,
+        "createdAt": "2016-09-07T11:53:38.654Z",
+        "updatedAt": "2016-09-07T11:53:38.654Z",
+        "id": 15
+      },
+      {
+        "activity": "logged in at 2016-09-07 16:17:46",
+        "user": 1,
+        "createdAt": "2016-09-07T14:17:46.563Z",
+        "updatedAt": "2016-09-07T14:17:46.563Z",
+        "id": 16
+      },
+      {
+        "activity": "logged in at 2016-09-07 17:35:44",
+        "user": 1,
+        "createdAt": "2016-09-07T15:35:44.772Z",
+        "updatedAt": "2016-09-07T15:35:44.772Z",
+        "id": 17
+      },
+      {
+        "activity": "logged in at 2016-09-07 17:37:45",
+        "user": 1,
+        "createdAt": "2016-09-07T15:37:45.639Z",
+        "updatedAt": "2016-09-07T15:37:45.639Z",
+        "id": 18
+      },
+      {
+        "activity": "logged in at 2016-09-07 17:38:55",
+        "user": 1,
+        "createdAt": "2016-09-07T15:38:55.227Z",
+        "updatedAt": "2016-09-07T15:38:55.227Z",
+        "id": 19
+      },
+      {
+        "activity": "logged in at 2016-09-07 17:39:42",
+        "user": 1,
+        "createdAt": "2016-09-07T15:39:42.552Z",
+        "updatedAt": "2016-09-07T15:39:42.552Z",
+        "id": 20
+      },
+      {
+        "activity": "logged in at 2016-09-07 17:49:06",
+        "user": 1,
+        "createdAt": "2016-09-07T15:49:06.912Z",
+        "updatedAt": "2016-09-07T15:49:06.912Z",
+        "id": 21
+      },
+      {
+        "activity": "logged in at 2016-09-07 17:49:24",
+        "user": 1,
+        "createdAt": "2016-09-07T15:49:24.502Z",
+        "updatedAt": "2016-09-07T15:49:24.502Z",
+        "id": 22
+      },
+      {
+        "activity": "logged in at 2016-09-07 17:50:58",
+        "user": 1,
+        "createdAt": "2016-09-07T15:50:58.868Z",
+        "updatedAt": "2016-09-07T15:50:58.868Z",
+        "id": 23
+      },
+      {
+        "activity": "logged in at 2016-09-07 17:51:53",
+        "user": 1,
+        "createdAt": "2016-09-07T15:51:53.318Z",
+        "updatedAt": "2016-09-07T15:51:53.318Z",
+        "id": 24
+      },
+      {
+        "activity": "logged in at 2016-09-07 17:53:29",
+        "user": 1,
+        "createdAt": "2016-09-07T15:53:29.289Z",
+        "updatedAt": "2016-09-07T15:53:29.289Z",
+        "id": 25
+      },
+      {
+        "activity": "logged in at 2016-09-07 17:54:43",
+        "user": 1,
+        "createdAt": "2016-09-07T15:54:43.349Z",
+        "updatedAt": "2016-09-07T15:54:43.349Z",
+        "id": 26
+      },
+      {
+        "activity": "logged in at 2016-09-07 18:02:50",
+        "user": 1,
+        "createdAt": "2016-09-07T16:02:50.639Z",
+        "updatedAt": "2016-09-07T16:02:50.639Z",
+        "id": 27
+      },
+      {
+        "activity": "logged in at 2016-09-08 11:06:41",
+        "user": 1,
+        "createdAt": "2016-09-08T09:06:41.167Z",
+        "updatedAt": "2016-09-08T09:06:41.167Z",
+        "id": 28
+      },
+      {
+        "activity": "logged in at 2016-09-08 12:25:18",
+        "user": 1,
+        "createdAt": "2016-09-08T10:25:18.050Z",
+        "updatedAt": "2016-09-08T10:25:18.050Z",
+        "id": 29
+      },
+      {
+        "activity": "logged in at 2016-09-08 12:37:13",
+        "user": 1,
+        "createdAt": "2016-09-08T10:37:13.192Z",
+        "updatedAt": "2016-09-08T10:37:13.192Z",
+        "id": 30
+      },
+      {
+        "activity": "logged in at 2016-09-08 12:47:50",
+        "user": 1,
+        "createdAt": "2016-09-08T10:47:50.367Z",
+        "updatedAt": "2016-09-08T10:47:50.367Z",
+        "id": 31
+      },
+      {
+        "activity": "logged in at 2016-09-08 13:36:24",
+        "user": 1,
+        "createdAt": "2016-09-08T11:36:24.908Z",
+        "updatedAt": "2016-09-08T11:36:24.908Z",
+        "id": 32
+      },
+      {
+        "activity": "logged in at 2016-09-08 13:52:22",
+        "user": 1,
+        "createdAt": "2016-09-08T11:52:22.671Z",
+        "updatedAt": "2016-09-08T11:52:22.671Z",
+        "id": 33
+      },
+      {
+        "activity": "logged in at 2016-09-08 15:14:45",
+        "user": 1,
+        "createdAt": "2016-09-08T13:14:45.805Z",
+        "updatedAt": "2016-09-08T13:14:45.805Z",
+        "id": 34
+      },
+      {
+        "activity": "logged in at 2016-09-08 16:40:08",
+        "user": 1,
+        "createdAt": "2016-09-08T14:40:08.404Z",
+        "updatedAt": "2016-09-08T14:40:08.404Z",
+        "id": 35
+      },
+      {
+        "activity": "logged in at 2016-09-08 17:29:26",
+        "user": 1,
+        "createdAt": "2016-09-08T15:29:26.828Z",
+        "updatedAt": "2016-09-08T15:29:26.828Z",
+        "id": 36
+      },
+      {
+        "activity": "logged in at 2016-09-08 17:36:48",
+        "user": 1,
+        "createdAt": "2016-09-08T15:36:48.649Z",
+        "updatedAt": "2016-09-08T15:36:48.649Z",
+        "id": 37
+      },
+      {
+        "activity": "logged in at 2016-09-14 17:30:14",
+        "user": 1,
+        "createdAt": "2016-09-14T15:30:15.546Z",
+        "updatedAt": "2016-09-14T15:30:15.546Z",
+        "id": 38
+      },
+      {
+        "activity": "logged in at 2016-09-14 17:44:28",
+        "user": 1,
+        "createdAt": "2016-09-14T15:44:28.668Z",
+        "updatedAt": "2016-09-14T15:44:28.668Z",
+        "id": 39
+      },
+      {
+        "activity": "logged in at 2016-09-14 17:47:55",
+        "user": 1,
+        "createdAt": "2016-09-14T15:47:55.039Z",
+        "updatedAt": "2016-09-14T15:47:55.039Z",
+        "id": 40
+      },
+      {
+        "activity": "logged in at 2016-09-14 17:52:06",
+        "user": 1,
+        "createdAt": "2016-09-14T15:52:06.234Z",
+        "updatedAt": "2016-09-14T15:52:06.234Z",
+        "id": 41
+      },
+      {
+        "activity": "logged in at 2016-09-15 10:36:30",
+        "user": 1,
+        "createdAt": "2016-09-15T08:36:30.100Z",
+        "updatedAt": "2016-09-15T08:36:30.100Z",
+        "id": 42
+      },
+      {
+        "activity": "logged in at 2016-09-15 10:53:56",
+        "user": 1,
+        "createdAt": "2016-09-15T08:53:56.363Z",
+        "updatedAt": "2016-09-15T08:53:56.363Z",
+        "id": 43
+      },
+      {
+        "activity": "logged in at 2016-09-15 12:15:13",
+        "user": 1,
+        "createdAt": "2016-09-15T10:15:13.849Z",
+        "updatedAt": "2016-09-15T10:15:13.849Z",
+        "id": 44
+      },
+      {
+        "activity": "logged in at 2016-09-15 12:30:35",
+        "user": 1,
+        "createdAt": "2016-09-15T10:30:35.258Z",
+        "updatedAt": "2016-09-15T10:30:35.258Z",
+        "id": 45
+      },
+      {
+        "activity": "logged in at 2016-09-15 16:51:03",
+        "user": 1,
+        "createdAt": "2016-09-15T14:51:03.541Z",
+        "updatedAt": "2016-09-15T14:51:03.541Z",
+        "id": 46
+      },
+      {
+        "activity": "logged in at 2016-09-15 17:01:11",
+        "user": 1,
+        "createdAt": "2016-09-15T15:01:11.843Z",
+        "updatedAt": "2016-09-15T15:01:11.843Z",
+        "id": 47
+      },
+      {
+        "activity": "logged in at 2016-09-19 16:09:49",
+        "user": 1,
+        "createdAt": "2016-09-19T14:09:53.038Z",
+        "updatedAt": "2016-09-19T14:09:53.038Z",
+        "id": 48
+      },
+      {
+        "activity": "logged in at 2016-09-21 11:28:12",
+        "user": 1,
+        "createdAt": "2016-09-21T09:28:12.282Z",
+        "updatedAt": "2016-09-21T09:28:12.282Z",
+        "id": 49
+      },
+      {
+        "activity": "logged in at 2016-09-21 11:31:23",
+        "user": 1,
+        "createdAt": "2016-09-21T09:31:23.478Z",
+        "updatedAt": "2016-09-21T09:31:23.478Z",
+        "id": 50
+      },
+      {
+        "activity": "logged in at 2016-09-21 12:33:49",
+        "user": 1,
+        "createdAt": "2016-09-21T10:33:49.298Z",
+        "updatedAt": "2016-09-21T10:33:49.298Z",
+        "id": 51
+      },
+      {
+        "activity": "logged in at 2016-09-29 16:51:12",
+        "user": 1,
+        "createdAt": "2016-09-29T14:51:12.422Z",
+        "updatedAt": "2016-09-29T14:51:12.422Z",
+        "id": 52
+      }
+    ],
+    "usersettings": []
+  },
+  "schema": {
+    "article_dps__dp_articles": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "autoIncrement": true,
+        "type": "integer"
+      },
+      "dp_articles": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "dp",
+        "on": "id",
+        "via": "article_dps"
+      },
+      "article_dps": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "article",
+        "on": "id",
+        "via": "dp_articles"
+      }
+    },
+    "article": {
+      "reference": {
+        "type": "string",
+        "unique": true
+      },
+      "designation": {
+        "type": "string"
+      },
+      "indice": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "chiffrage": {
+      "article": {
+        "type": "integer",
+        "model": "article",
+        "foreignKey": true,
+        "alias": "article"
+      },
+      "indice": {
+        "type": "integer"
+      },
+      "designationIndice": {
+        "type": "string"
+      },
+      "etudesmethodes_temps": {
+        "type": "float"
+      },
+      "etudesmethodes_cout": {
+        "type": "integer"
+      },
+      "fad": {
+        "type": "integer"
+      },
+      "outillage": {
+        "type": "integer"
+      },
+      "commentaire": {
+        "type": "mediumtext"
+      },
+      "difficulte": {
+        "type": "string"
+      },
+      "delai": {
+        "type": "string"
+      },
+      "traitement": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "chiffragecalculmatiere": {
+      "chiffragematiere": {
+        "type": "integer",
+        "model": "chiffragematiere",
+        "foreignKey": true,
+        "alias": "chiffragematiere",
+        "via": "calcul"
+      },
+      "longueur": {
+        "type": "integer"
+      },
+      "largeur": {
+        "type": "integer"
+      },
+      "epaisseur": {
+        "type": "float"
+      },
+      "matiere": {
+        "type": "integer",
+        "model": "matiere",
+        "foreignKey": true,
+        "alias": "matiere"
+      },
+      "squelettex": {
+        "type": "integer"
+      },
+      "squelettey": {
+        "type": "integer"
+      },
+      "pince": {
+        "type": "integer"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "chiffragecomposant": {
+      "chiffrage": {
+        "type": "integer",
+        "model": "chiffrage",
+        "foreignKey": true,
+        "alias": "chiffrage",
+        "via": "composants"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "chiffrageformattole": {
+      "chiffragecalculmatiere": {
+        "type": "integer",
+        "model": "chiffragecalculmatiere",
+        "foreignKey": true,
+        "alias": "chiffragecalculmatiere",
+        "via": "formattole"
+      },
+      "dispo": {
+        "type": "boolean"
+      },
+      "selectionne": {
+        "type": "boolean"
+      },
+      "longueur": {
+        "type": "integer"
+      },
+      "largeur": {
+        "type": "integer"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "chiffragematiere": {
+      "chiffrage": {
+        "type": "integer",
+        "model": "chiffrage",
+        "foreignKey": true,
+        "alias": "chiffrage",
+        "via": "matieres"
+      },
+      "nuance": {
+        "type": "integer",
+        "model": "chiffragenuancematiere",
+        "foreignKey": true,
+        "alias": "nuance",
+        "via": "matiere"
+      },
+      "longueur": {
+        "type": "integer"
+      },
+      "largeur": {
+        "type": "integer"
+      },
+      "epaisseur": {
+        "type": "float"
+      },
+      "quantite": {
+        "type": "integer"
+      },
+      "poids": {
+        "type": "float"
+      },
+      "prix": {
+        "type": "float"
+      },
+      "calcul": {
+        "type": "integer",
+        "model": "chiffragecalculmatiere",
+        "foreignKey": true,
+        "alias": "calcul",
+        "via": "chiffragematiere"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "chiffragenuancematiere": {
+      "nom": {
+        "type": "string",
+        "unique": true
+      },
+      "matiere": {
+        "type": "integer",
+        "model": "matiere",
+        "foreignKey": true,
+        "alias": "matiere"
+      },
+      "prix": {
+        "type": "float"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "chiffrageoperation": {
+      "chiffrage": {
+        "type": "integer",
+        "model": "chiffrage",
+        "foreignKey": true,
+        "alias": "chiffrage",
+        "via": "operations"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "chiffragetarif": {
+      "chiffrage": {
+        "type": "integer",
+        "model": "chiffrage",
+        "foreignKey": true,
+        "alias": "chiffrage",
+        "via": "tarifs"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "chiffragets": {
+      "chiffrage": {
+        "type": "integer",
+        "model": "chiffrage",
+        "foreignKey": true,
+        "alias": "chiffrage",
+        "via": "traitementssurface"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "chiffrageusinage": {
+      "chiffrage": {
+        "type": "integer",
+        "model": "chiffrage",
+        "foreignKey": true,
+        "alias": "chiffrage",
+        "via": "usinages"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "client": {
+      "nom": {
+        "type": "string",
+        "unique": true
+      },
+      "telephone": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "contact": {
+      "nom": {
+        "type": "string"
+      },
+      "prenom": {
+        "type": "string"
+      },
+      "civilite": {
+        "type": "string"
+      },
+      "email": {
+        "type": "string"
+      },
+      "telephone": {
+        "type": "string"
+      },
+      "fax": {
+        "type": "string"
+      },
+      "adresse": {
+        "type": "string"
+      },
+      "codepostal": {
+        "type": "string"
+      },
+      "ville": {
+        "type": "string"
+      },
+      "client": {
+        "type": "integer",
+        "model": "client",
+        "foreignKey": true,
+        "alias": "client"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "dp": {
+      "numero": {
+        "type": "integer",
+        "autoIncrement": true,
+        "unique": true
+      },
+      "client": {
+        "type": "integer",
+        "model": "client",
+        "foreignKey": true,
+        "alias": "client"
+      },
+      "deviseur": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "deviseur"
+      },
+      "version": {
+        "type": "integer",
+        "defaultsTo": 0
+      },
+      "referenceclient": {
+        "type": "string"
+      },
+      "datearendreprevue": {
+        "type": "string"
+      },
+      "commercial": {
+        "type": "string"
+      },
+      "solde": {
+        "type": "boolean"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "dparticle": {
+      "article": {
+        "type": "integer",
+        "model": "article",
+        "foreignKey": true,
+        "alias": "article"
+      },
+      "dp": {
+        "type": "integer",
+        "model": "dp",
+        "foreignKey": true,
+        "alias": "dp"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "form": {
+      "nom": {
+        "type": "string",
+        "unique": true
+      },
+      "ui": {
+        "type": "json"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "matiere": {
+      "nom": {
+        "type": "string",
+        "unique": true
+      },
+      "densite": {
+        "type": "float"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "menu": {
+      "name": {
+        "type": "string",
+        "unique": true
+      },
+      "icon": {
+        "type": "string"
+      },
+      "state": {
+        "type": "string"
+      },
+      "left": {
+        "type": "boolean"
+      },
+      "center": {
+        "type": "boolean"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "menuitem": {
+      "text": {
+        "type": "string"
+      },
+      "icon": {
+        "type": "string"
+      },
+      "state": {
+        "type": "string"
+      },
+      "href": {
+        "type": "string"
+      },
+      "menu": {
+        "type": "integer",
+        "model": "menu",
+        "foreignKey": true,
+        "alias": "menu"
+      },
+      "listoptions": {
+        "type": "json"
+      },
+      "listfields": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "name": {
+        "type": "string"
+      },
+      "enable": {
+        "type": "boolean",
+        "defaultsTo": true
+      },
+      "email": {
+        "type": "string",
+        "unique": true
+      },
+      "encryptedPassword": {
+        "type": "string"
+      },
+      "lastLoggedIn": {
+        "type": "date",
+        "defaultsTo": "1970-01-01T00:00:00.000Z"
+      },
+      "gravatarUrl": {
+        "type": "string"
+      },
+      "settings": {
+        "type": "integer",
+        "model": "usersettings",
+        "foreignKey": true,
+        "alias": "settings",
+        "unique": true
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "useractivity": {
+      "activity": {
+        "type": "string"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "usersettings": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "user": {
+      "id": 1
+    },
+    "useractivity": {
+      "id": 52
+    },
+    "usersettings": {},
+    "client": {
+      "id": 3
+    },
+    "dp": {
+      "numero": 12345,
+      "id": 5
+    },
+    "contact": {
+      "id": 3
+    },
+    "article": {},
+    "article_dps__dp_articles": {},
+    "dparticle": {},
+    "chiffrage": {},
+    "chiffragecomposant": {},
+    "chiffragematiere": {},
+    "chiffrageoperation": {},
+    "chiffragetarif": {},
+    "chiffragets": {},
+    "chiffrageusinage": {},
+    "chiffragecalculmatiere": {},
+    "chiffragenuancematiere": {
+      "id": 8
+    },
+    "chiffrageformattole": {},
+    "matiere": {
+      "id": 6
+    },
+    "form": {},
+    "menu": {
+      "id": 4
+    },
+    "menuitem": {
+      "id": 14
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<div>
+  <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>
+          <span>Matiere</span>
+        </h2>
+        <span flex></span>
+        <md-button ng-click="add($event)">
+            <md-icon>add</md-icon>
+        </md-button>
+       
+      </div>
+    </md-toolbar>
+    
+  <md-content flex>
+    <md-list>
+
+      <md-list-item class="md-3-line" ng-repeat="matiere in matieres">
+        
+
+        <div class="md-list-item-text">
+          <h3>{{matiere.nom}}</h3>
+          <h4>{{matiere.densite}} Kg/m&sup3</h4>
+           <md-icon class="md-secondary" ng-click="edit($event,matiere)" aria-label="Editer">edit</md-icon>         
+        </div>
+        <md-divider inset></md-divider>
+      </md-list-item>
+
+    </md-list>
+
+  </md-content>
+</div>

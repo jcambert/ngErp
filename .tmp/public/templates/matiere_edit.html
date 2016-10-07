@@ -1,0 +1,44 @@
+<md-dialog aria-label="">
+  <form name="frmmaterial" ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2 ng-if="mode=='edit'">Edition de la matiere {{matiere.nom}}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon aria-label="Close dialog">close</md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+        <md-input-container class="md-block">
+        <label>Matiere</label>
+        <md-icon >blur_on</md-icon>
+        <input name="nom" ng-model="matiere.nom" type="string"  required>
+        <div ng-messages="frmmaterial.nom.$error"  ng-show="frmmaterial.nom.$dirty" ng-messages-multiple>
+            <div ng-message="required">This is required.</div>
+        </div>
+    </md-input-container>
+      <md-input-container class="md-block">
+            <label>Density</label>
+            <md-icon >blur_on</md-icon>
+            <input name="density" ng-model="matiere.densite" type="nummber"  required min="0">
+            <div ng-messages="frmmaterial.density.$error"  ng-show="frmmaterial.density.$dirty" ng-messages-multiple>
+                <div ng-message="required">This is required.</div>
+                <div ng-message="min">The density must by higher than 0</div>
+            </div>
+        </md-input-container>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      
+      <span flex></span>
+      <md-button ng-click="cancel()">
+       <md-icon>cancel</md-icon>
+      </md-button>
+      <md-button ng-click="ok()">
+          <md-icon>check</md-icon>
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

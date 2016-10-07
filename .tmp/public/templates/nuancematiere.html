@@ -1,0 +1,33 @@
+<div>
+
+    
+  <md-content flex>
+      
+    <md-list>
+        <md-subheader class="md-no-sticky">Nuance Matière
+        <md-button ng-click="add($event)">
+            <md-icon>add</md-icon>
+        </md-button>
+        </md-subheader>
+      <md-list-item class="md-3-line" ng-repeat="nuance in nuances">
+        <md-icon  ng-click="delete(nuance)" aria-label="Delete">delete</md-icon>
+         
+           
+            <md-icon ng-click="edit($event,nuance)" aria-label="Editer">edit</md-icon>  
+
+        <div class="md-list-item-text">
+          <h3>{{nuance.nom}}</h3>
+          <p>{{nuance.matiere.nom}}</p>
+          <h4>{{nuance.matiere.densite}} Kg/m&sup3</h4>
+          <h4>{{nuance.prix}} &euro;/Kg</h4>
+        </div>
+            
+       
+          
+        
+      </md-list-item>
+
+    </md-list>
+
+  </md-content>
+</div>

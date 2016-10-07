@@ -1,0 +1,11 @@
+<div layout-gt-md="row">
+  <panel-widget flex title="Gestion des contacts"  class="fixed-height-widget" options='true'>
+     <md-content layout-padding ng-controller="ContactController as vm"  ng-init="vm.resource='contact';vm.loadOrEdit();">
+        {{vm.editMode()?'Mode Edition':'Mode Ajout'}}
+        {{vm.resource}}{{vm.jsonTemplate}}
+            <dyn-form json-template="{{vm.jsonTemplate}}">toto
+            </dyn-form>
+        </md-content>
+   </panel-widget>
+</div>
+        

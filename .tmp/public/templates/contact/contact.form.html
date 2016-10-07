@@ -1,0 +1,75 @@
+<div layout-gt-md="row">
+  <panel-widget flex title="Gestion des contacts"  class="fixed-height-widget" options='true'>
+     <md-content layout-padding ng-controller="ContactController as vm"  ng-init="vm.resource='contact';vm.loadOrEdit();">
+        {{vm.editMode()?'Mode Edition':'Mode Ajout'}}
+        {{vm.resource}}
+            <form name="frm">
+                 <textarea ui-tinymce="vm.tinymceOptions" ng-model="vm.frm"></textarea>
+                <div layout="row" >
+                    <md-input-container flex="30" ng-if="vm.addMode()">
+                        <label>Client</label>
+                        
+                        <md-select name="client" ng-model="vm.item.client.id" required >
+                            <md-option ng-repeat="client in vm.clients" ng-value="client.id" >
+                                {{client.nom}}
+                            </md-option>
+                        </md-select>
+                        <div ng-messages="frm.client.$error">
+                            <div ng-message="required">This is required.</div>
+                        </div>
+                    </md-input-container>
+                    <md-input-container flex="30" ng-if="vm.editMode()">
+                        <label>Client</label>
+                        <input name="nom" ng-model="vm.item.client.nom" ng-disabled="true">
+                        
+                    </md-input-container>
+                   
+                </div>
+                
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Civility</label>
+                        <md-select ng-model="vm.item.civilite">
+                            <md-option ng-repeat="civilite in vm.civilites" ng-value="civilite" ng-selected="{{ civilite === vm.item.civilite }}">
+                                {{civilite}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Firstname</label>
+                        <input minlength="3" maxlength="100" required md-no-asterisk name="nom" ng-model="vm.item.nom">
+                        <div ng-messages="frm.nom.$error">
+                        <div ng-message="required">This is required.</div>
+                        <div ng-message="minlength">Must have 3 characters at least.</div>
+                        <div ng-message="maxlength">Must have 100 characters max.</div>
+                        </div>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Lastname</label>
+                        <input minlength="3" maxlength="100" required md-no-asterisk name="prenom" ng-model="vm.item.prenom">
+                        <div ng-messages="frm.prenom.$error">
+                        <div ng-message="required">This is required.</div>
+                        <div ng-message="minlength">Must have 3 characters at least.</div>
+                        <div ng-message="maxlength">Must have 100 characters max.</div>
+                        </div>
+                    </md-input-container>
+                </div>
+                
+
+                <div layout="row">
+                    <md-input-container flex="30">
+                    <label>Telephone</label>
+                    <input required name="telephone" ng-model="vm.item.telephone">
+                    <div ng-messages="frm.telephone.$error">
+                        <div ng-message="required">This is required.</div>
+                    </div>
+                    </md-input-container>
+                </div>
+               
+                <save-cancel-toolbar></save-cancel-toolbar>
+
+            </form>
+        </md-content>
+   </panel-widget>
+</div>
+        

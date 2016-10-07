@@ -13,6 +13,7 @@ module.exports = {
             return res.json(item);
         })
     },
+    
     left:function(req,res){
         Menu.find({left:true}).exec(function(err,menus){
             if(err) return res.negotiate(err);

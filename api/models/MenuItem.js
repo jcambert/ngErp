@@ -23,6 +23,12 @@ module.exports = {
       },
       menu:{
           model:'menu'
+      },
+      listoptions:{
+          type:'json'
+      },
+      listfields:{
+          type:'string'
       }
   }
 };

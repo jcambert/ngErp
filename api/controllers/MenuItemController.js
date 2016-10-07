@@ -6,6 +6,12 @@
  */
 
 module.exports = {
-	
+	bystate:function(req,res){
+        sails.log.debug('get menu bystate:'+req.params.state)
+        MenuItem.findOne({state:req.params.state}).exec(function(err,item){
+            if(err)return res.negotiate(err);
+            return res.json(item);
+        })
+    },
 };
 

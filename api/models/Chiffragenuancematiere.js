@@ -15,7 +15,6 @@ module.exports = {
       },
       matiere:{
         model:'matiere',
-        unique:true  
       },
       chiffragesmatiere:{
           collection:'Chiffragematiere',

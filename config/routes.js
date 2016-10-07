@@ -40,6 +40,7 @@ module.exports.routes = {
  'GET /': 'PageController.showHomePage',
  
  'GET /menu/byname/:name':'MenuController.byname',
+ 'GET /menu/bystate/:state':'MenuItemController.bystate',
  'GET /meny/left':'MenuController.left',
  
  'GET /form/byname/:name':'FormController.byname',
