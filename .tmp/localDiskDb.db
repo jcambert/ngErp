@@ -7,6 +7,30 @@
     "chiffragecomposant": [],
     "chiffrageformattole": [],
     "chiffragematiere": [],
+    "chiffragemodeloperation": [
+      {
+        "nom": "Cisaillage",
+        "thprep": 70,
+        "thope": 70,
+        "tpsprep": 0.2,
+        "help": "Coup de cisaille",
+        "baseope": 0.005,
+        "createdAt": "2016-10-07T17:07:32.081Z",
+        "updatedAt": "2016-10-07T17:07:32.081Z",
+        "id": 1
+      },
+      {
+        "nom": "Debit",
+        "thprep": 50,
+        "thope": 60,
+        "tpsprep": 0.2,
+        "help": "debit en mm",
+        "baseope": 0.004,
+        "createdAt": "2016-10-07T17:10:29.377Z",
+        "updatedAt": "2016-10-07T17:10:29.377Z",
+        "id": 2
+      }
+    ],
     "chiffragenuancematiere": [
       {
         "nom": "Xc10<3",
@@ -66,41 +90,81 @@
         "nom": "Schlumberger",
         "telephone": "012345688",
         "createdAt": "2016-09-15T13:43:39.695Z",
-        "updatedAt": "2016-09-15T14:17:40.477Z",
+        "updatedAt": "2016-10-09T21:02:11.610Z",
         "id": 1
       },
       {
         "nom": "toto",
         "telephone": "1235",
         "createdAt": "2016-09-15T14:05:56.484Z",
-        "updatedAt": "2016-09-15T14:05:56.484Z",
+        "updatedAt": "2016-10-09T21:01:27.368Z",
         "id": 3
+      },
+      {
+        "nom": "test",
+        "telephone": "",
+        "createdAt": "2016-10-07T17:22:48.597Z",
+        "updatedAt": "2016-10-08T14:44:54.890Z",
+        "id": 4
+      },
+      {
+        "nom": "riri",
+        "telephone": "1234578",
+        "createdAt": "2016-10-08T14:45:38.962Z",
+        "updatedAt": "2016-10-09T11:34:06.615Z",
+        "id": 5
       }
     ],
     "contact": [
       {
         "client": 3,
         "civilite": "Mr",
-        "nom": "ambert",
+        "nom": "Ambert",
         "createdAt": "2016-09-15T16:16:18.489Z",
-        "updatedAt": "2016-09-15T16:16:18.489Z",
-        "id": 1
+        "updatedAt": "2016-10-09T21:01:27.408Z",
+        "id": 1,
+        "prenom": "Jc Christophe",
+        "email": "jc.ambert@free.fr"
       },
       {
         "client": 3,
         "civilite": "Mr",
         "nom": "ttoitit",
         "createdAt": "2016-09-15T16:17:29.291Z",
-        "updatedAt": "2016-09-15T16:17:29.291Z",
-        "id": 2
+        "updatedAt": "2016-10-09T09:50:10.060Z",
+        "id": 2,
+        "prenom": "freezer"
       },
       {
         "client": 1,
         "civilite": "Mme",
         "nom": "qsdfghj",
         "createdAt": "2016-09-16T06:57:03.883Z",
-        "updatedAt": "2016-09-16T06:57:03.883Z",
-        "id": 3
+        "updatedAt": "2016-10-09T21:02:11.679Z",
+        "id": 3,
+        "prenom": "Titia",
+        "email": "toto@free.fr"
+      },
+      {
+        "civilite": "Mr",
+        "nom": "wxcvbn,",
+        "prenom": "lmkmklkkm",
+        "email": "free@gogle.fr",
+        "client": 1,
+        "createdAt": "2016-10-08T14:16:24.402Z",
+        "updatedAt": "2016-10-09T09:30:21.463Z",
+        "id": 4,
+        "telephone": "012345678"
+      },
+      {
+        "civilite": "Mr",
+        "nom": "ambert",
+        "prenom": "freezer",
+        "email": "ff@free.fr",
+        "client": 5,
+        "createdAt": "2016-10-08T14:47:51.050Z",
+        "updatedAt": "2016-10-09T11:34:06.642Z",
+        "id": 5
       }
     ],
     "dp": [
@@ -954,6 +1018,39 @@
         "type": "datetime"
       }
     },
+    "chiffragemodeloperation": {
+      "nom": {
+        "type": "string",
+        "unique": true
+      },
+      "thprep": {
+        "type": "float"
+      },
+      "thope": {
+        "type": "float"
+      },
+      "tpsprep": {
+        "type": "float"
+      },
+      "help": {
+        "type": "string"
+      },
+      "baseope": {
+        "type": "float"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
     "chiffragenuancematiere": {
       "nom": {
         "type": "string",
@@ -1405,14 +1502,14 @@
     },
     "usersettings": {},
     "client": {
-      "id": 3
+      "id": 5
     },
     "dp": {
       "numero": 12345,
       "id": 5
     },
     "contact": {
-      "id": 3
+      "id": 5
     },
     "article": {},
     "article_dps__dp_articles": {},
@@ -1438,6 +1535,9 @@
     },
     "menuitem": {
       "id": 14
+    },
+    "chiffragemodeloperation": {
+      "id": 2
     }
   }
 }
