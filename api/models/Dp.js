@@ -22,10 +22,13 @@ module.exports = {
           model: 'user',
           //required:true
       },
-      version:{
-          type: 'integer',
-          required:true,
-          defaultsTo:0
+      versions:{
+          colleciton:'DpVersion',
+          via:'dp'
+          
+          //type: 'integer',
+          //required:true,
+          //defaultsTo:0
       },
       referenceclient:{
           type: 'string',
