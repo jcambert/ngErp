@@ -11,8 +11,8 @@ module.exports = {
       numero:{
           type: 'integer',
           autoIncrement:true,
-          //required:true,
-          unique:true
+          required:true,
+          //unique:true
       },
       client:{
           model:'client',
@@ -23,12 +23,12 @@ module.exports = {
           //required:true
       },
       versions:{
-          colleciton:'DpVersion',
-          via:'dp'
+          //collection:'DpVersion',
+          //via:'dp'
           
-          //type: 'integer',
-          //required:true,
-          //defaultsTo:0
+          type: 'integer',
+          required:true,
+          defaultsTo:0
       },
       referenceclient:{
           type: 'string',

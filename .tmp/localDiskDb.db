@@ -1,6 +1,7 @@
 {
   "data": {
     "article_dps__dp_articles": [],
+    "dpversion": [],
     "article": [],
     "chiffrage": [],
     "chiffragecalculmatiere": [],
@@ -208,6 +209,14 @@
         "createdAt": "2016-10-06T15:59:51.733Z",
         "updatedAt": "2016-10-06T15:59:51.733Z",
         "id": 5
+      },
+      {
+        "version": 1,
+        "numero": 2,
+        "versions": 0,
+        "createdAt": "2016-10-11T10:33:37.717Z",
+        "updatedAt": "2016-10-11T10:33:37.733Z",
+        "id": 6
       }
     ],
     "dparticle": [],
@@ -801,6 +810,41 @@
         "via": "dp_articles"
       }
     },
+    "dpversion": {
+      "version": {
+        "type": "integer",
+        "defaultsTo": 0
+      },
+      "description": {
+        "type": "string"
+      },
+      "dp": {
+        "type": "integer",
+        "model": "dp",
+        "foreignKey": true,
+        "alias": "dp",
+        "via": "versions"
+      },
+      "chiffrage": {
+        "type": "integer",
+        "model": "chiffrage",
+        "foreignKey": true,
+        "alias": "chiffrage",
+        "via": "versions"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
     "article": {
       "reference": {
         "type": "string",
@@ -1242,8 +1286,7 @@
     "dp": {
       "numero": {
         "type": "integer",
-        "autoIncrement": true,
-        "unique": true
+        "autoIncrement": true
       },
       "client": {
         "type": "integer",
@@ -1257,7 +1300,7 @@
         "foreignKey": true,
         "alias": "deviseur"
       },
-      "version": {
+      "versions": {
         "type": "integer",
         "defaultsTo": 0
       },
@@ -1515,7 +1558,7 @@
     },
     "dp": {
       "numero": 12345,
-      "id": 5
+      "id": 6
     },
     "contact": {
       "id": 6
@@ -1547,6 +1590,7 @@
     },
     "chiffragemodeloperation": {
       "id": 2
-    }
+    },
+    "dpversion": {}
   }
 }
