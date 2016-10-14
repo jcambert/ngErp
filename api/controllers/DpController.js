@@ -6,6 +6,13 @@
  */
 
 module.exports = {
-	
+    
+    //Return all dp that are not soldes
+	all : function(req,res){
+       /* Dp.findOne({nom:req.params.name}).exec(function(err,item){
+            if(err)return res.negotiate(err);
+            return res.json(item);
+        })*/
+    }
 };
 
