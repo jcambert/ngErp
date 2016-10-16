@@ -1,0 +1,1 @@
+module.exports.message = require('./locale.message.js');

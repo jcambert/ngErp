@@ -10,7 +10,7 @@ module.exports = {
   attributes: {
       reference:{
           type: 'string',
-          require:true,
+          required:true,
           unique:true
       },
       designation:{

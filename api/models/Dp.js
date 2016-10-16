@@ -22,7 +22,7 @@ module.exports = {
           model: 'user',
           //required:true
       },
-      versions:{
+      version:{
           //collection:'DpVersion',
           //via:'dp'
           
@@ -46,7 +46,8 @@ module.exports = {
       articles:{
           collection: 'article',
           via:'dp',
-          through:'dparticle'
+          through:'dparticle',
+          dominant: true
       }
   }
 };

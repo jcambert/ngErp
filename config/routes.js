@@ -47,6 +47,11 @@ module.exports.routes = {
  
  'GET /client/byname':'ClientController.byname',
  
+ 
+ 'GET /dp/all':'DpController.all',
+ 'GET /dp/copy':'DpController.copy',
+ 'GET /dp/info':'DpController.info',
+ 
  'POST /signup': 'UserController.signup',
  'GET /signin/:email/:password': 'UserController.signin',
  'GET /signout': 'UserController.signout',
