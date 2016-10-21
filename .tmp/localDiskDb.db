@@ -99,7 +99,7 @@
         "nom": "Schlumberger",
         "telephone": "012345688",
         "createdAt": "2016-09-15T13:43:39.695Z",
-        "updatedAt": "2016-10-10T11:32:57.394Z",
+        "updatedAt": "2016-10-20T16:01:55.865Z",
         "id": 1
       },
       {
@@ -140,7 +140,7 @@
         "civilite": "Mr",
         "nom": "ttoitit",
         "createdAt": "2016-09-15T16:17:29.291Z",
-        "updatedAt": "2016-10-10T11:32:57.464Z",
+        "updatedAt": "2016-10-19T14:21:44.315Z",
         "id": 2,
         "prenom": "freezer"
       },
@@ -149,7 +149,7 @@
         "civilite": "Mme",
         "nom": "qsdfghj",
         "createdAt": "2016-09-16T06:57:03.883Z",
-        "updatedAt": "2016-10-10T11:32:57.400Z",
+        "updatedAt": "2016-10-19T14:21:44.315Z",
         "id": 3,
         "prenom": "Titia-Ambert",
         "email": "toto@free.fr"
@@ -161,7 +161,7 @@
         "email": "free@gogle.fr",
         "client": 1,
         "createdAt": "2016-10-08T14:16:24.402Z",
-        "updatedAt": "2016-10-10T11:32:57.400Z",
+        "updatedAt": "2016-10-19T14:21:44.315Z",
         "id": 4,
         "telephone": "012345678"
       },
@@ -192,7 +192,7 @@
         "versions": 0,
         "solde": true,
         "createdAt": "2016-10-16T15:00:30.763Z",
-        "updatedAt": "2016-10-16T20:04:55.962Z",
+        "updatedAt": "2016-10-19T14:38:13.868Z",
         "id": 11
       },
       {
@@ -201,17 +201,29 @@
         "versions": 0,
         "solde": true,
         "createdAt": "2016-10-16T20:04:45.902Z",
-        "updatedAt": "2016-10-16T20:04:55.962Z",
+        "updatedAt": "2016-10-19T14:38:13.868Z",
         "id": 28
       },
       {
         "version": 2,
         "numero": 2,
         "versions": 0,
-        "solde": false,
+        "solde": true,
         "createdAt": "2016-10-16T20:04:55.981Z",
-        "updatedAt": "2016-10-16T20:04:55.994Z",
-        "id": 29
+        "updatedAt": "2016-10-19T14:38:13.868Z",
+        "id": 29,
+        "client": 1
+      },
+      {
+        "version": 3,
+        "numero": 2,
+        "versions": 0,
+        "solde": false,
+        "client": 1,
+        "createdAt": "2016-10-19T14:38:13.899Z",
+        "updatedAt": "2016-10-20T16:01:55.928Z",
+        "id": 30,
+        "referenceclient": "12345"
       }
     ],
     "dparticle": [
@@ -315,10 +327,31 @@
       },
       {
         "article": 1,
-        "dp": 29,
+        "dp": null,
         "createdAt": "2016-10-16T20:04:56.013Z",
-        "updatedAt": "2016-10-16T20:04:56.013Z",
+        "updatedAt": "2016-10-19T14:21:44.331Z",
         "id": 18
+      },
+      {
+        "article": 1,
+        "dp": 29,
+        "createdAt": "2016-10-19T14:21:44.409Z",
+        "updatedAt": "2016-10-19T14:21:44.409Z",
+        "id": 19
+      },
+      {
+        "article": 1,
+        "dp": null,
+        "createdAt": "2016-10-19T14:38:13.962Z",
+        "updatedAt": "2016-10-20T16:01:55.896Z",
+        "id": 20
+      },
+      {
+        "article": 1,
+        "dp": 30,
+        "createdAt": "2016-10-20T16:01:55.959Z",
+        "updatedAt": "2016-10-20T16:01:55.959Z",
+        "id": 21
       }
     ],
     "form": [],
@@ -1659,7 +1692,7 @@
     },
     "dp": {
       "numero": 12345,
-      "id": 29
+      "id": 30
     },
     "contact": {
       "id": 6
@@ -1669,7 +1702,7 @@
     },
     "article_dps__dp_articles": {},
     "dparticle": {
-      "id": 18
+      "id": 21
     },
     "chiffrage": {},
     "chiffragecomposant": {},

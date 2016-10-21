@@ -8,8 +8,8 @@
 module.exports = {
     
     //Return all dp that are not soldes
-	all : function(req,res){
-       erp.dp.all().then(function(items){return res.json(items);}).catch(function(err){return res.negotiate(err);});
+	find : function(req,res){
+       erp.dp.all(req.params).then(function(items){return res.json(items);}).catch(function(err){return res.negotiate(err);});
     },
     
     info:function(req,res){
