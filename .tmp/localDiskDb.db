@@ -99,7 +99,7 @@
         "nom": "Schlumberger",
         "telephone": "012345688",
         "createdAt": "2016-09-15T13:43:39.695Z",
-        "updatedAt": "2016-10-20T16:01:55.865Z",
+        "updatedAt": "2016-10-26T10:24:48.797Z",
         "id": 1
       },
       {
@@ -221,9 +221,9 @@
         "solde": false,
         "client": 1,
         "createdAt": "2016-10-19T14:38:13.899Z",
-        "updatedAt": "2016-10-20T16:01:55.928Z",
+        "updatedAt": "2016-10-26T10:24:48.852Z",
         "id": 30,
-        "referenceclient": "12345"
+        "referenceclient": "1234"
       }
     ],
     "dparticle": [
@@ -348,10 +348,31 @@
       },
       {
         "article": 1,
-        "dp": 30,
+        "dp": null,
         "createdAt": "2016-10-20T16:01:55.959Z",
-        "updatedAt": "2016-10-20T16:01:55.959Z",
+        "updatedAt": "2016-10-26T10:24:25.952Z",
         "id": 21
+      },
+      {
+        "article": 1,
+        "dp": null,
+        "createdAt": "2016-10-26T10:24:26.004Z",
+        "updatedAt": "2016-10-26T10:24:40.718Z",
+        "id": 22
+      },
+      {
+        "article": 1,
+        "dp": null,
+        "createdAt": "2016-10-26T10:24:40.765Z",
+        "updatedAt": "2016-10-26T10:24:48.815Z",
+        "id": 23
+      },
+      {
+        "article": 1,
+        "dp": 30,
+        "createdAt": "2016-10-26T10:24:48.865Z",
+        "updatedAt": "2016-10-26T10:24:48.865Z",
+        "id": 24
       }
     ],
     "form": [],
@@ -1702,7 +1723,7 @@
     },
     "article_dps__dp_articles": {},
     "dparticle": {
-      "id": 21
+      "id": 24
     },
     "chiffrage": {},
     "chiffragecomposant": {},
