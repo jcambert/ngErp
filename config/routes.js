@@ -47,6 +47,10 @@ module.exports.routes = {
  
  'GET /client/byname':'ClientController.byname',
  
+ 'GET /ports':'HelperController.getPorts',
+ 'GET /delais':'HelperController.getDelais',
+ 'GET /reglements':'HelperController.getReglements',
+ 'GET /causesdeclines':'HelperController.getCausesDeclines',
  
  //'GET /dp/all':'DpController.all',
  'GET /dp/copy':'DpController.copy',

@@ -99,7 +99,7 @@
         "nom": "Schlumberger",
         "telephone": "012345688",
         "createdAt": "2016-09-15T13:43:39.695Z",
-        "updatedAt": "2016-10-26T10:24:48.797Z",
+        "updatedAt": "2016-10-31T16:32:17.343Z",
         "id": 1
       },
       {
@@ -221,9 +221,9 @@
         "solde": false,
         "client": 1,
         "createdAt": "2016-10-19T14:38:13.899Z",
-        "updatedAt": "2016-10-26T10:24:48.852Z",
+        "updatedAt": "2016-10-31T16:32:17.393Z",
         "id": 30,
-        "referenceclient": "1234"
+        "referenceclient": "1234678"
       }
     ],
     "dparticle": [
@@ -369,10 +369,52 @@
       },
       {
         "article": 1,
-        "dp": 30,
+        "dp": null,
         "createdAt": "2016-10-26T10:24:48.865Z",
-        "updatedAt": "2016-10-26T10:24:48.865Z",
+        "updatedAt": "2016-10-31T16:30:27.554Z",
         "id": 24
+      },
+      {
+        "article": 1,
+        "dp": null,
+        "createdAt": "2016-10-31T16:30:27.617Z",
+        "updatedAt": "2016-10-31T16:31:04.035Z",
+        "id": 25
+      },
+      {
+        "article": 1,
+        "dp": null,
+        "createdAt": "2016-10-31T16:31:04.072Z",
+        "updatedAt": "2016-10-31T16:31:14.316Z",
+        "id": 26
+      },
+      {
+        "article": 1,
+        "dp": null,
+        "createdAt": "2016-10-31T16:31:14.410Z",
+        "updatedAt": "2016-10-31T16:31:27.780Z",
+        "id": 27
+      },
+      {
+        "article": 1,
+        "dp": null,
+        "createdAt": "2016-10-31T16:31:27.874Z",
+        "updatedAt": "2016-10-31T16:31:39.751Z",
+        "id": 28
+      },
+      {
+        "article": 1,
+        "dp": null,
+        "createdAt": "2016-10-31T16:31:39.844Z",
+        "updatedAt": "2016-10-31T16:32:17.353Z",
+        "id": 29
+      },
+      {
+        "article": 1,
+        "dp": 30,
+        "createdAt": "2016-10-31T16:32:17.406Z",
+        "updatedAt": "2016-10-31T16:32:17.406Z",
+        "id": 30
       }
     ],
     "form": [],
@@ -1723,7 +1765,7 @@
     },
     "article_dps__dp_articles": {},
     "dparticle": {
-      "id": 24
+      "id": 30
     },
     "chiffrage": {},
     "chiffragecomposant": {},
