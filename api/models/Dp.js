@@ -10,7 +10,7 @@ module.exports = {
   attributes: {
       numero:{
           type: 'integer',
-          autoIncrement:true,
+          //autoIncrement:true,
           required:true,
           //unique:true
       },
@@ -41,7 +41,7 @@ module.exports = {
       },
       solde:{
           type: 'boolean',
-          defaultTo: false
+          defaultsTo: false
       },
       articles:{
           collection: 'article',

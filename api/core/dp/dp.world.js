@@ -1,9 +1,9 @@
 var Promise = require('bluebird');
 
-module.exports = function all(params){
+module.exports = function world(params){
     
     return new Promise(function(resolve, reject){
-        var defaultOptions={where:{solde:false},sort:'numero desc'};
+        var defaultOptions={sort:'numero desc'};
         var options={};
         _.extend(options,defaultOptions,params);
         sails.log(options);

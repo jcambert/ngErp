@@ -185,238 +185,8 @@
         "id": 6
       }
     ],
-    "dp": [
-      {
-        "version": 0,
-        "numero": 2,
-        "versions": 0,
-        "solde": true,
-        "createdAt": "2016-10-16T15:00:30.763Z",
-        "updatedAt": "2016-10-19T14:38:13.868Z",
-        "id": 11
-      },
-      {
-        "version": 1,
-        "numero": 2,
-        "versions": 0,
-        "solde": true,
-        "createdAt": "2016-10-16T20:04:45.902Z",
-        "updatedAt": "2016-10-19T14:38:13.868Z",
-        "id": 28
-      },
-      {
-        "version": 2,
-        "numero": 2,
-        "versions": 0,
-        "solde": true,
-        "createdAt": "2016-10-16T20:04:55.981Z",
-        "updatedAt": "2016-10-19T14:38:13.868Z",
-        "id": 29,
-        "client": 1
-      },
-      {
-        "version": 3,
-        "numero": 2,
-        "versions": 0,
-        "solde": false,
-        "client": 1,
-        "createdAt": "2016-10-19T14:38:13.899Z",
-        "updatedAt": "2016-10-31T16:32:17.393Z",
-        "id": 30,
-        "referenceclient": "1234678"
-      }
-    ],
-    "dparticle": [
-      {
-        "article": 1,
-        "dp": 11,
-        "createdAt": "2016-10-16T18:32:34.785Z",
-        "updatedAt": "2016-10-16T18:32:34.785Z",
-        "id": 4
-      },
-      {
-        "article": 1,
-        "dp": 16,
-        "createdAt": "2016-10-16T18:42:24.224Z",
-        "updatedAt": "2016-10-16T18:42:24.224Z",
-        "id": 5
-      },
-      {
-        "article": 1,
-        "dp": 17,
-        "createdAt": "2016-10-16T18:44:05.632Z",
-        "updatedAt": "2016-10-16T18:44:05.632Z",
-        "id": 6
-      },
-      {
-        "article": 1,
-        "dp": 18,
-        "createdAt": "2016-10-16T18:45:23.244Z",
-        "updatedAt": "2016-10-16T18:45:23.244Z",
-        "id": 7
-      },
-      {
-        "article": 1,
-        "dp": 19,
-        "createdAt": "2016-10-16T18:51:03.398Z",
-        "updatedAt": "2016-10-16T18:51:03.398Z",
-        "id": 8
-      },
-      {
-        "article": 1,
-        "dp": 20,
-        "createdAt": "2016-10-16T19:13:20.833Z",
-        "updatedAt": "2016-10-16T19:13:20.833Z",
-        "id": 9
-      },
-      {
-        "article": 1,
-        "dp": 21,
-        "createdAt": "2016-10-16T19:15:54.134Z",
-        "updatedAt": "2016-10-16T19:15:54.134Z",
-        "id": 10
-      },
-      {
-        "article": 1,
-        "dp": 22,
-        "createdAt": "2016-10-16T19:17:50.699Z",
-        "updatedAt": "2016-10-16T19:17:50.699Z",
-        "id": 11
-      },
-      {
-        "article": 1,
-        "dp": 23,
-        "createdAt": "2016-10-16T19:18:02.082Z",
-        "updatedAt": "2016-10-16T19:18:02.082Z",
-        "id": 12
-      },
-      {
-        "article": 1,
-        "dp": 24,
-        "createdAt": "2016-10-16T19:29:13.206Z",
-        "updatedAt": "2016-10-16T19:29:13.206Z",
-        "id": 13
-      },
-      {
-        "article": 1,
-        "dp": 25,
-        "createdAt": "2016-10-16T19:42:03.203Z",
-        "updatedAt": "2016-10-16T19:42:03.203Z",
-        "id": 14
-      },
-      {
-        "article": 1,
-        "dp": 26,
-        "createdAt": "2016-10-16T19:46:21.944Z",
-        "updatedAt": "2016-10-16T19:46:21.944Z",
-        "id": 15
-      },
-      {
-        "article": 1,
-        "dp": 27,
-        "createdAt": "2016-10-16T19:49:45.181Z",
-        "updatedAt": "2016-10-16T19:49:45.181Z",
-        "id": 16
-      },
-      {
-        "article": 1,
-        "dp": 28,
-        "createdAt": "2016-10-16T20:04:45.932Z",
-        "updatedAt": "2016-10-16T20:04:45.932Z",
-        "id": 17
-      },
-      {
-        "article": 1,
-        "dp": null,
-        "createdAt": "2016-10-16T20:04:56.013Z",
-        "updatedAt": "2016-10-19T14:21:44.331Z",
-        "id": 18
-      },
-      {
-        "article": 1,
-        "dp": 29,
-        "createdAt": "2016-10-19T14:21:44.409Z",
-        "updatedAt": "2016-10-19T14:21:44.409Z",
-        "id": 19
-      },
-      {
-        "article": 1,
-        "dp": null,
-        "createdAt": "2016-10-19T14:38:13.962Z",
-        "updatedAt": "2016-10-20T16:01:55.896Z",
-        "id": 20
-      },
-      {
-        "article": 1,
-        "dp": null,
-        "createdAt": "2016-10-20T16:01:55.959Z",
-        "updatedAt": "2016-10-26T10:24:25.952Z",
-        "id": 21
-      },
-      {
-        "article": 1,
-        "dp": null,
-        "createdAt": "2016-10-26T10:24:26.004Z",
-        "updatedAt": "2016-10-26T10:24:40.718Z",
-        "id": 22
-      },
-      {
-        "article": 1,
-        "dp": null,
-        "createdAt": "2016-10-26T10:24:40.765Z",
-        "updatedAt": "2016-10-26T10:24:48.815Z",
-        "id": 23
-      },
-      {
-        "article": 1,
-        "dp": null,
-        "createdAt": "2016-10-26T10:24:48.865Z",
-        "updatedAt": "2016-10-31T16:30:27.554Z",
-        "id": 24
-      },
-      {
-        "article": 1,
-        "dp": null,
-        "createdAt": "2016-10-31T16:30:27.617Z",
-        "updatedAt": "2016-10-31T16:31:04.035Z",
-        "id": 25
-      },
-      {
-        "article": 1,
-        "dp": null,
-        "createdAt": "2016-10-31T16:31:04.072Z",
-        "updatedAt": "2016-10-31T16:31:14.316Z",
-        "id": 26
-      },
-      {
-        "article": 1,
-        "dp": null,
-        "createdAt": "2016-10-31T16:31:14.410Z",
-        "updatedAt": "2016-10-31T16:31:27.780Z",
-        "id": 27
-      },
-      {
-        "article": 1,
-        "dp": null,
-        "createdAt": "2016-10-31T16:31:27.874Z",
-        "updatedAt": "2016-10-31T16:31:39.751Z",
-        "id": 28
-      },
-      {
-        "article": 1,
-        "dp": null,
-        "createdAt": "2016-10-31T16:31:39.844Z",
-        "updatedAt": "2016-10-31T16:32:17.353Z",
-        "id": 29
-      },
-      {
-        "article": 1,
-        "dp": 30,
-        "createdAt": "2016-10-31T16:32:17.406Z",
-        "updatedAt": "2016-10-31T16:32:17.406Z",
-        "id": 30
-      }
-    ],
+    "dp": [],
+    "dparticle": [],
     "form": [],
     "matiere": [
       {
@@ -1482,8 +1252,7 @@
     },
     "dp": {
       "numero": {
-        "type": "integer",
-        "autoIncrement": true
+        "type": "integer"
       },
       "client": {
         "type": "integer",
@@ -1511,7 +1280,8 @@
         "type": "string"
       },
       "solde": {
-        "type": "boolean"
+        "type": "boolean",
+        "defaultsTo": false
       },
       "id": {
         "type": "integer",
@@ -1755,7 +1525,7 @@
     },
     "dp": {
       "numero": 12345,
-      "id": 30
+      "id": 36
     },
     "contact": {
       "id": 6

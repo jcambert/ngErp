@@ -52,9 +52,11 @@ module.exports.routes = {
  'GET /reglements':'HelperController.getReglements',
  'GET /causesdeclines':'HelperController.getCausesDeclines',
  
- //'GET /dp/all':'DpController.all',
+ 'GET /dp/all':'DpController.all',
+ 'DELETE /dp/all':'DpController.deleteAll',
  'GET /dp/copy':'DpController.copy',
  'GET /dp/info':'DpController.info',
+ 'GET /dp/max':'DpController.maxnumero',
  
  'POST /signup': 'UserController.signup',
  'GET /signin/:email/:password': 'UserController.signin',
