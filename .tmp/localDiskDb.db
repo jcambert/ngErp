@@ -7,9 +7,8 @@
         "reference": "ref001",
         "designation": "desi001",
         "createdAt": "2016-10-16T15:04:32.404Z",
-        "updatedAt": "2016-11-03T16:04:18.698Z",
-        "id": 1,
-        "indice": "0"
+        "updatedAt": "2016-10-16T15:04:32.404Z",
+        "id": 1
       }
     ],
     "chiffrage": [],
@@ -190,26 +189,10 @@
       {
         "numero": 1245,
         "version": 0,
-        "solde": true,
+        "solde": false,
         "createdAt": "2016-11-02T18:59:42.760Z",
-        "updatedAt": "2016-11-03T11:13:33.467Z",
+        "updatedAt": "2016-11-02T18:59:42.760Z",
         "id": 37
-      },
-      {
-        "numero": 1245,
-        "version": 1,
-        "solde": false,
-        "createdAt": "2016-11-03T11:13:33.483Z",
-        "updatedAt": "2016-11-03T11:13:33.501Z",
-        "id": 38
-      },
-      {
-        "numero": 1246,
-        "version": 0,
-        "solde": false,
-        "createdAt": "2016-11-03T11:21:13.687Z",
-        "updatedAt": "2016-11-03T14:45:41.837Z",
-        "id": 39
       }
     ],
     "dparticle": [],
@@ -397,15 +380,6 @@
         "createdAt": "2016-10-07T15:33:36.121Z",
         "updatedAt": "2016-10-07T15:33:36.121Z",
         "id": 14
-      },
-      {
-        "menu": 1,
-        "text": "Chiffrages",
-        "icon": "ion-social-euro",
-        "state": "home.chiffrage",
-        "createdAt": "2016-11-03T16:20:32.200Z",
-        "updatedAt": "2016-11-03T16:20:32.200Z",
-        "id": 15
       }
     ],
     "user": [
@@ -1560,7 +1534,7 @@
     },
     "dp": {
       "numero": 12345,
-      "id": 39
+      "id": 37
     },
     "contact": {
       "id": 6
@@ -1592,7 +1566,7 @@
       "id": 4
     },
     "menuitem": {
-      "id": 15
+      "id": 14
     },
     "chiffragemodeloperation": {
       "id": 2

@@ -17,8 +17,7 @@ module.exports = {
           type: 'string',
       },
       indice:{
-          type: 'string',
-          defaultsTo:'0'
+          type: 'string'
       },
       dps:{
           collection: 'dp',
